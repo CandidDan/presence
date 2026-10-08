@@ -30,7 +30,10 @@
       </svg>
       <span>Presence</span>
     </a>
-    <span class="pill" role="status"><i aria-hidden="true"></i>In development</span>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/spaces">For spaces</a>
+      <span class="pill" role="status"><i aria-hidden="true"></i>In development</span>
+    </nav>
   </header>
 
   <section class="hero" id="top" aria-labelledby="hero-h">
@@ -73,7 +76,7 @@
 
   <section class="wrap sec" aria-labelledby="how-h" style="padding-top: 128px; padding-bottom: 128px;">
     <div style="display: flex; flex-direction: column; gap: 56px;">
-      <h2 class="h1" style="font-size: clamp(36px, 4.4vw, 60px); max-width: 16ch;">How it is intended to work</h2>
+      <h2 id="how-h" class="h1" style="font-size: clamp(36px, 4.4vw, 60px); max-width: 16ch;">How it is intended to work</h2>
       <div class="how-grid">
         <article class="step">
           <svg class="glyph" viewBox="0 0 72 72" aria-hidden="true" focusable="false">
@@ -181,8 +184,8 @@
         <p class="small" style="max-width: 44ch;">An approved privacy notice—naming the data controller, contact, purpose, provider and how to delete your details—will appear here before anything is collected. No analytics trackers run on this page.</p>
       </div>
 
-      <form id="interest" novalidate style="display: flex; flex-direction: column; gap: 24px;">
-        <div class="notice" role="note">
+      <form id="interest" data-preview-form aria-describedby="interest-notice" novalidate style="display: flex; flex-direction: column; gap: 24px;">
+        <div class="notice" id="interest-notice" role="note">
           <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="8.5" fill="none" stroke="#F0A35E" stroke-width="1.8"></circle><circle cx="10" cy="10" r="2.6" fill="#F0A35E"></circle></svg>
           <span><strong style="font-weight: 500;">Design preview.</strong> This form doesn’t send or store anything yet. The real waitlist opens once the privacy notice, data contact and email provider are confirmed.</span>
         </div>
@@ -202,12 +205,21 @@
         </div>
         <div class="chk"><input id="c-dev" name="dev" type="checkbox"><label for="c-dev">Email me about Presence development and the first local trials (optional)</label></div>
         <div style="display: flex; flex-direction: column; gap: 16px; align-items: flex-start;">
-          <button class="btn" type="submit">Join the waitlist</button>
+          <button class="btn" type="submit" disabled>Join the waitlist</button>
+          <noscript><p class="small">This is a non-collecting preview. JavaScript is needed to try the preview button; nothing can be registered here.</p></noscript>
           <p id="form-msg" class="msg" role="status" aria-live="polite" hidden>Preview only — nothing was sent or stored. The waitlist opens once the privacy notice and provider are confirmed.</p>
         </div>
       </form>
     </div>
   </section>
+
+  <aside class="wrap spaces-invitation" aria-labelledby="spaces-invitation-h">
+    <div>
+      <h2 id="spaces-invitation-h">A welcoming space?</h2>
+      <p class="small">Run a café, coworking space or another place where people connect? Explore a future Presence trial.</p>
+    </div>
+    <a href="/spaces">For spaces <span aria-hidden="true">↗</span></a>
+  </aside>
 
   <footer class="foot">
     <div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; padding-top: 32px; padding-bottom: 48px;">
