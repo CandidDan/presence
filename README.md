@@ -6,6 +6,26 @@ Static holding page for Presence ("A reason to say hello."). No build step: `ind
 
 Run locally: `npx serve .` (or any static server). Deployed via Vercel from `main`; `vercel.json` sets `X-Robots-Tag: noindex`.
 
+## Split-layout concept
+
+On this exploration branch, the default straight connection eases into a person,
+briefly enlarges the orange dot, and holds through a wider scroll interval before
+withdrawing. Only the illustration settles; page scrolling is never snapped.
+`?v=thread` and `?v=ripple` remain available for comparison. Reduced-motion mode
+shows a static connection, with no pulses or scroll-driven movement, including
+when the preference changes while the page is open.
+
+Cloud browser regression gate (Python Playwright and `/usr/bin/chromium`):
+
+```sh
+python3 tests/connection_browser.py
+```
+
+The gate starts its own temporary cloud static server. It tests desktop, tablet,
+mobile and narrow layouts, forward/reverse scroll, connection hold and endpoint,
+reduced-motion changes, navigation and the non-collecting form. Synthetic form
+data is submitted only to that temporary development server.
+
 ## Access gate
 
 `middleware.js` is a free edge gate: if the `PRESENCE_CODE` env var is set in Vercel, visitors see a code prompt and get a 30-day cookie on success. Delete the env var (and redeploy) to open the site. Don't use Vercel's built-in Password Protection — it is a paid add-on.
