@@ -82,7 +82,7 @@ h1, h2, h3, p { margin: 0; }
 /* ---------- Two-column exploration ---------- */
 .bg-field { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 0; pointer-events: none; overflow: visible; }
 .bg-field .p { fill: #CFCECA; transform-box: fill-box; transform-origin: center; transition: fill .35s ease, transform .45s cubic-bezier(.2,.8,.3,1); }
-.bg-field .p.on { fill: #F0A35E; transform: scale(1.7); }
+.bg-field .p.on { fill: #F0A35E; transform: scale(1.25); }
 .bg-field .p.met { fill: #E8C8A6; }
 .bg-field .me { fill: #1B1A19; }
 .bg-field .ln { stroke: #F0A35E; stroke-width: 3; stroke-linecap: round; fill: none; }
@@ -92,6 +92,11 @@ h1, h2, h3, p { margin: 0; }
 .bg-field[data-mode="desktop"] .p, .bg-field[data-mode="desktop"] .ring, .bg-field[data-mode="desktop"] .wave { opacity: .55; }
 .bg-field[data-mode="desktop"] .ln { opacity: .6; }
 .bg-field[data-mode="phone"] .ln { stroke-width: 2.5; }
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-field .p { transition: none; }
+  .bg-field[data-mode="phone"], .bg-field[data-mode="tablet"] { position: absolute; }
+}
 
 
 .shell { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 44fr) minmax(0, 56fr); min-height: 100vh; }

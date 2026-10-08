@@ -29,8 +29,13 @@
 
   var mode, me, people, targets, nodes, line, ring, waveA, waveB, heroH;
   var shown = 0, goal = 0, raf = 0, lastOn = -1;
+  var arrival;
 
   function layout() {
+    if (raf) cancelAnimationFrame(raf);
+    raf = 0;
+    if (arrival) arrival.cancel();
+    svg.setAttribute('data-reduced-motion', String(reduce.matches));
     while (svg.firstChild) svg.removeChild(svg.firstChild);
     var W = window.innerWidth, H = window.innerHeight;
     mode = W >= 1024 ? 'desktop' : W >= 640 ? 'tablet' : 'phone';
@@ -94,19 +99,21 @@
     el('circle', { class: 'me', cx: me.x, cy: me.y, r: cfg.meR });
     lastOn = -1;
     goal = phaseFromScroll();
-    shown = reduce.matches ? snap(goal) : goal;
+    shown = goal;
     fade();
     draw();
   }
 
   function phaseFromScroll() {
+    // A single static connection for reduced motion, independent of scroll.
+    if (reduce.matches) return 0.5;
     var max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
     return 0.5 + clamp(window.scrollY / max, 0, 1) * (targets.length - 1);
   }
-  function snap(ph) { return Math.floor(ph) + 0.5; }
 
   // On tablet/phone the field is the hero image at full strength, then recedes behind the content.
   function fade() {
+    if (reduce.matches) { svg.style.opacity = ''; svg.style.transform = ''; return; }
     if (mode === 'desktop') { svg.style.opacity = ''; svg.style.transform = ''; return; }
     var y = window.scrollY;
     var t = clamp(y / (heroH * 0.4), 0, 1);
@@ -119,7 +126,10 @@
     if (!targets.length) return;
     var k = clamp(Math.floor(shown), 0, targets.length - 1);
     var u = shown - k;
-    var ext = u < 0.32 ? ease(u / 0.32) : u > 0.68 ? 1 - ease((u - 0.68) / 0.32) : 1;
+    // Ease into the person, then hold through most of this scroll interval.
+    // Only the illustration settles: never change the reader's scroll position.
+    var ext = u < 0.22 ? 1 - Math.pow(1 - u / 0.22, 3) : u > 0.78 ? 1 - ease((u - 0.78) / 0.22) : 1;
+    if (ext > 0.995) ext = 1;
     var t = people[targets[k]];
     var dx = t.x - me.x, dy = t.y - me.y, len = Math.hypot(dx, dy) || 1;
     var ex = me.x + dx * ext, ey = me.y + dy * ext;
@@ -137,10 +147,21 @@
       line.setAttribute('d', ext < 0.01 ? '' : 'M' + me.x + ',' + me.y + ' L' + ex + ',' + ey);
     }
 
-    var on = ext > 0.985 ? targets[k] : -1;
+    var on = ext === 1 ? targets[k] : -1;
     if (on !== lastOn) {
+      if (arrival) arrival.cancel();
       if (lastOn >= 0) { nodes[lastOn].classList.remove('on'); nodes[lastOn].classList.add('met'); }
-      if (on >= 0) { nodes[on].classList.add('on'); pulse(people[on]); }
+      if (on >= 0) {
+        nodes[on].classList.add('on');
+        if (!reduce.matches && nodes[on].animate) {
+          arrival = nodes[on].animate([
+            { transform: 'scale(1)' },
+            { transform: 'scale(1.6)', offset: 0.55 },
+            { transform: 'scale(1.25)' }
+          ], { duration: 420, easing: 'cubic-bezier(.2,.8,.3,1)' });
+        }
+        pulse(people[on]);
+      }
       lastOn = on;
     }
   }
@@ -148,21 +169,26 @@
   function pulse(p) {
     if (reduce.matches || !ring.animate) return;
     ring.setAttribute('cx', p.x); ring.setAttribute('cy', p.y);
-    ring.animate([{ r: 6, opacity: 0.9 }, { r: 30, opacity: 0 }], { duration: 900, easing: 'cubic-bezier(.2,.8,.3,1)' });
+    ring.getAnimations().forEach(function (animation) { animation.cancel(); });
+    ring.animate([{ r: 6, opacity: 0.6 }, { r: 18, opacity: 0 }], { duration: 600, easing: 'cubic-bezier(.2,.8,.3,1)' });
   }
 
   function tick() {
     raf = 0;
-    if (reduce.matches) { shown = snap(goal); draw(); return; }
+    if (reduce.matches) return;
     shown += (goal - shown) * 0.14;
     if (Math.abs(goal - shown) < 0.0008) shown = goal;
     draw();
     if (shown !== goal) raf = requestAnimationFrame(tick);
   }
-  function onScroll() { goal = phaseFromScroll(); fade(); if (!raf) raf = requestAnimationFrame(tick); }
+  function onScroll() {
+    if (reduce.matches) return;
+    goal = phaseFromScroll(); fade(); if (!raf) raf = requestAnimationFrame(tick);
+  }
 
   var resizeT, lastW = window.innerWidth;
   window.addEventListener('scroll', onScroll, { passive: true });
+  reduce.addEventListener('change', layout);
   // Ignore height-only resizes (mobile address bar showing/hiding) so the field doesn't jump.
   window.addEventListener('resize', function () {
     if (window.innerWidth === lastW && mode !== 'desktop') return;
