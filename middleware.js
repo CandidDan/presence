@@ -1,6 +1,6 @@
 // Free access gate for the preview: one shared code, set as PRESENCE_CODE in Vercel env.
 // Runs at the edge on every request. No code set → site is open.
-export const config = { matcher: ['/((?!assets/|mark.svg|styles.css|preview.js).*)'] };
+export const config = { matcher: ['/((?!assets/|mark.svg|styles.css|preview.js|field.js).*)'] };
 
 const COOKIE = 'presence_gate';
 
