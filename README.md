@@ -29,6 +29,23 @@ mobile and narrow layouts, forward/reverse scroll, connection hold and endpoint,
 reduced-motion changes, navigation and the non-collecting form. Synthetic form
 data is submitted only to that temporary development server.
 
+## Spaces in the split concept
+
+The consumer homepage links discreetly to `/spaces`, which uses the same split
+layout, shared styles and connection field. Its content carries over the trial
+walkthrough and proposed early equipment supply from the current main site.
+A shareable page for participating spaces is described as a proposed feature;
+this static preview does not create live venue pages or public listings.
+`/spaces/example` shows a clearly fictional café host page, linked from `/spaces`.
+Any trial equipment is intended to be small and discreet; specifications remain exploratory.
+
+Both interest forms use the shared non-collecting preview handler. Buttons stay
+disabled until the handler is installed, so disabling JavaScript cannot submit
+field values. No backend, email provider or data collection is configured.
+
+Run `python3 tests/spaces_browser.py` for routes, responsive layouts, navigation,
+keyboard/label checks and both forms, including JavaScript-disabled behavior.
+
 ## Access gate
 
 `middleware.js` is a free edge gate: if the `PRESENCE_CODE` env var is set in Vercel, visitors see a code prompt and get a 30-day cookie on success. Delete the env var (and redeploy) to open the site. Don't use Vercel's built-in Password Protection — it is a paid add-on.
