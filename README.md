@@ -10,9 +10,12 @@ Run locally: `npx serve .` (or any static server). Deployed via Vercel from `mai
 
 On this exploration branch, the default straight connection eases into a person,
 briefly enlarges the orange dot, and holds through a wider scroll interval before
-withdrawing. Only the illustration settles; page scrolling is never snapped.
+withdrawing. A faint dashed circle identifies the target as the connection
+approaches. Before release, the target grows slightly and yields a few pixels;
+it then settles back as the line gently retracts and the circle fades.
+Only the illustration settles; page scrolling is never snapped.
 `?v=thread` and `?v=ripple` remain available for comparison. Reduced-motion mode
-shows a static connection, with no pulses or scroll-driven movement, including
+shows a static connection and dashed target circle, with no pulses or scroll-driven movement, including
 when the preference changes while the page is open.
 
 Cloud browser regression gate (Python Playwright and `/usr/bin/chromium`):
