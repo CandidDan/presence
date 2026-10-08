@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" width="28" height="28">
+  <!-- Presence: provisional mark, pending approval -->
+  <circle cx="14" cy="14" r="3.6" fill="#1B1A19"/>
+  <circle cx="14" cy="4" r="1.8" fill="#CFCECA"/><circle cx="22.7" cy="9" r="1.8" fill="#F0A35E"/><circle cx="22.7" cy="19" r="1.8" fill="#CFCECA"/>
+  <circle cx="14" cy="24" r="1.8" fill="#CFCECA"/><circle cx="5.3" cy="19" r="1.8" fill="#CFCECA"/><circle cx="5.3" cy="9" r="1.8" fill="#CFCECA"/>
+  <line x1="17" y1="12.3" x2="21" y2="10" stroke="#F0A35E" stroke-width="1.8" stroke-linecap="round"/>
+</svg>
