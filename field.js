@@ -27,9 +27,10 @@
   var ease = function (t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; };
   var clamp = function (v, a, b) { return Math.max(a, Math.min(b, v)); };
 
-  var mode, me, people, targets, nodes, line, ring, waveA, waveB, heroH;
+  var mode, me, people, targets, nodes, line, halo, waveA, waveB, heroH;
   var shown = 0, goal = 0, raf = 0, lastOn = -1;
   var arrival;
+  var pulled = -1;
 
   function layout() {
     if (raf) cancelAnimationFrame(raf);
@@ -95,9 +96,10 @@
       line = el('path', { class: 'ln', d: '' });
     }
     nodes = people.map(function (p) { return el('circle', { class: 'p', cx: p.x, cy: p.y, r: cfg.dot }); });
-    ring = el('circle', { class: 'ring', cx: 0, cy: 0, r: 0, opacity: 0 });
+    halo = el('circle', { class: 'target-halo', cx: 0, cy: 0, r: cfg.dot * 2.8 });
     el('circle', { class: 'me', cx: me.x, cy: me.y, r: cfg.meR });
     lastOn = -1;
+    pulled = -1;
     goal = phaseFromScroll();
     shown = goal;
     fade();
@@ -128,11 +130,34 @@
     var u = shown - k;
     // Ease into the person, then hold through most of this scroll interval.
     // Only the illustration settles: never change the reader's scroll position.
-    var ext = u < 0.22 ? 1 - Math.pow(1 - u / 0.22, 3) : u > 0.78 ? 1 - ease((u - 0.78) / 0.22) : 1;
+    var ext = u < 0.22 ? 1 - Math.pow(1 - u / 0.22, 3) : u > 0.84 ? 1 - ease((u - 0.84) / 0.16) : 1;
     if (ext > 0.995) ext = 1;
     var t = people[targets[k]];
     var dx = t.x - me.x, dy = t.y - me.y, len = Math.hypot(dx, dy) || 1;
-    var ex = me.x + dx * ext, ey = me.y + dy * ext;
+    // The person resists briefly, then returns to rest as the line releases.
+    // Rebuild from original coordinates each frame: reverse/fast scrolling
+    // must not leave a previous person displaced.
+    if (pulled >= 0 && pulled !== targets[k]) {
+      nodes[pulled].setAttribute('cx', people[pulled].x);
+      nodes[pulled].setAttribute('cy', people[pulled].y);
+      nodes[pulled].style.removeProperty('--target-scale');
+    }
+    var tension = reduce.matches ? 0 : u < 0.78 ? 0 : u <= 0.84
+      ? ease((u - 0.78) / 0.06)
+      : 1 - ease(clamp((u - 0.84) / 0.1, 0, 1));
+    var pull = tension * (mode === 'desktop' ? 4 : 3);
+    var tx = t.x + dx / len * pull, ty = t.y + dy / len * pull;
+    var target = nodes[targets[k]];
+    target.setAttribute('cx', tx);
+    target.setAttribute('cy', ty);
+    target.style.setProperty('--target-scale', String(1.25 + tension * 0.15));
+    pulled = targets[k];
+    var ex = me.x + (tx - me.x) * ext, ey = me.y + (ty - me.y) * ext;
+    halo.setAttribute('cx', tx);
+    halo.setAttribute('cy', ty);
+    var haloOpacity = u < 0.22 ? ease(clamp((u - 0.06) / 0.16, 0, 1))
+      : u > 0.84 ? 1 - ease((u - 0.84) / 0.16) : 1;
+    halo.style.opacity = String(haloOpacity * 0.55);
 
     if (variant === 'thread') {
       var sag = (1 - ext) * 0.22 * len + (ext < 1 ? 6 : 0);
@@ -141,7 +166,7 @@
     } else if (variant === 'ripple') {
       var half = (len / 2) * ext;
       waveA.setAttribute('r', half); waveA.setAttribute('opacity', ext < 0.02 ? 0 : 0.55);
-      waveB.setAttribute('cx', t.x); waveB.setAttribute('cy', t.y);
+      waveB.setAttribute('cx', tx); waveB.setAttribute('cy', ty);
       waveB.setAttribute('r', half); waveB.setAttribute('opacity', ext < 0.02 ? 0 : 0.8);
     } else {
       line.setAttribute('d', ext < 0.01 ? '' : 'M' + me.x + ',' + me.y + ' L' + ex + ',' + ey);
@@ -160,17 +185,9 @@
             { transform: 'scale(1.25)' }
           ], { duration: 420, easing: 'cubic-bezier(.2,.8,.3,1)' });
         }
-        pulse(people[on]);
       }
       lastOn = on;
     }
-  }
-
-  function pulse(p) {
-    if (reduce.matches || !ring.animate) return;
-    ring.setAttribute('cx', p.x); ring.setAttribute('cy', p.y);
-    ring.getAnimations().forEach(function (animation) { animation.cancel(); });
-    ring.animate([{ r: 6, opacity: 0.6 }, { r: 18, opacity: 0 }], { duration: 600, easing: 'cubic-bezier(.2,.8,.3,1)' });
   }
 
   function tick() {

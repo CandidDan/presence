@@ -82,14 +82,14 @@ h1, h2, h3, p { margin: 0; }
 /* ---------- Two-column exploration ---------- */
 .bg-field { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 0; pointer-events: none; overflow: visible; }
 .bg-field .p { fill: #CFCECA; transform-box: fill-box; transform-origin: center; transition: fill .35s ease, transform .45s cubic-bezier(.2,.8,.3,1); }
-.bg-field .p.on { fill: #F0A35E; transform: scale(1.25); }
+.bg-field .p.on { fill: #F0A35E; transform: scale(var(--target-scale, 1.25)); }
 .bg-field .p.met { fill: #E8C8A6; }
 .bg-field .me { fill: #1B1A19; }
 .bg-field .ln { stroke: #F0A35E; stroke-width: 3; stroke-linecap: round; fill: none; }
-.bg-field .ring { fill: none; stroke: #F0A35E; stroke-width: 1.5; }
+.bg-field .target-halo { fill: none; stroke: #CFCECA; stroke-width: 1.5; stroke-dasharray: 3 5; stroke-linecap: round; }
 .bg-field .wave { fill: none; stroke: #1B1A19; stroke-width: 1.2; }
 .bg-field .wave.t { stroke: #F0A35E; }
-.bg-field[data-mode="desktop"] .p, .bg-field[data-mode="desktop"] .ring, .bg-field[data-mode="desktop"] .wave { opacity: .55; }
+.bg-field[data-mode="desktop"] .p, .bg-field[data-mode="desktop"] .wave { opacity: .55; }
 .bg-field[data-mode="desktop"] .ln { opacity: .6; }
 .bg-field[data-mode="phone"] .ln { stroke-width: 2.5; }
 

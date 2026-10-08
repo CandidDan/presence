@@ -44,11 +44,26 @@ try:
             node = page.locator('#field .p.on')
             assert node.count() == 1
             first = (node.get_attribute('cx'), node.get_attribute('cy'))
+            first_node = node.element_handle()
+            halo = page.locator('#field .target-halo')
+            assert halo.get_attribute('cx') == first[0] and halo.get_attribute('cy') == first[1]
+            assert halo.evaluate("e => getComputedStyle(e).strokeDasharray") != 'none'
+            assert float(halo.evaluate("e => getComputedStyle(e).opacity")) > .5
             path = page.locator('#field .ln').evaluate('(p) => { const end=p.getPointAtLength(p.getTotalLength()); return [end.x,end.y]; }')
             assert math.dist(path, tuple(map(float, first))) < .1
             page.screenshot(path=str(SHOTS / (label + '-connected.png')))
             scroll_phase(1.7)
             assert (node.get_attribute('cx'), node.get_attribute('cy')) == first
+            scroll_phase(1.82)
+            stretched = (node.get_attribute('cx'), node.get_attribute('cy'))
+            assert 1 < math.dist(tuple(map(float, first)), tuple(map(float, stretched))) <= 4.1
+            assert float(node.evaluate("e => e.style.getPropertyValue('--target-scale')")) > 1.25
+            path = page.locator('#field .ln').evaluate('(p) => { const end=p.getPointAtLength(p.getTotalLength()); return [end.x,end.y]; }')
+            assert math.dist(path, tuple(map(float, stretched))) < .1
+            page.screenshot(path=str(SHOTS / (label + '-resisting.png')))
+            scroll_phase(1.96)
+            assert (first_node.get_attribute('cx'), first_node.get_attribute('cy')) == first
+            assert float(halo.evaluate("e => getComputedStyle(e).opacity")) < .1
             # It withdraws and reaches a different person, forwards and backwards.
             scroll_phase(1.9)
             assert page.locator('#field .p.on').count() == 0
@@ -76,6 +91,7 @@ try:
             page.wait_for_function("document.querySelector('#field').dataset.reducedMotion === 'true'")
             page.reload(wait_until='networkidle')
             assert page.locator('#field').get_attribute('data-reduced-motion') == 'true'
+            assert float(halo.evaluate("e => getComputedStyle(e).opacity")) > .5
             frozen = page.locator('#field').inner_html()
             page.locator('.left-cta a').click()
             assert page.url.endswith('#waitlist')
@@ -92,7 +108,7 @@ try:
             assert not requests
             assert page.evaluate('localStorage.length === 0 && sessionStorage.length === 0')
             assert not errors, errors
-            print('PASS:', label, 'hold, exact endpoint, forward/reverse, natural scroll, static reduced motion, navigation and non-collecting form')
+            print('PASS:', label, 'dashed halo, tension and return, hold, exact endpoint, forward/reverse, natural scroll, static reduced motion, navigation and non-collecting form')
             context.close()
 
         for variant in ['thread', 'ripple']:
