@@ -9,7 +9,7 @@ BASE = "http://127.0.0.1:3000"
 SHOTS = Path(os.environ.get("PRESENCE_SCREENSHOT_DIR", "/tmp/presence-screenshots"))
 SHOTS.mkdir(parents=True, exist_ok=True)
 
-for path in ["/", "/spaces", "/spaces/", "/styles.css", "/preview.js", "/mark.svg", "/assets/sample-coast.jpg"]:
+for path in ["/", "/spaces", "/spaces/", "/styles.css", "/preview.js", "/mark.svg", "/assets/ada-avatar.jpg", "/assets/noor-avatar.jpg", "/assets/noor-work.jpg"]:
     with urlopen(BASE + path) as response:
         assert response.status == 200, path
         assert response.read(), path

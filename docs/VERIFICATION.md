@@ -23,4 +23,4 @@ Screenshots were visually reviewed. Optional Google Fonts is blocked by cloud ne
 
 `git diff --check` passed. No build step or existing CI suite is present. The development server redirects `/spaces` to `/spaces/` and serves the directory index. An explicit Vercel rewrite maps `/spaces` to `/spaces/index.html`; Vercel preview routing and deployment headers still need verification on an authorised preview when available.
 
-Launch blockers: approved backend and privacy configuration for both forms; approval of provisional wording/mark and replacement or approval of the generated sample photograph; discovery technology and trial validation before hardware, cost or accuracy claims. These are future tasks, not completed work.
+Launch blockers: approved backend and privacy configuration for both forms; approval of provisional wording/mark and approval of illustrative example profiles; discovery technology and trial validation before hardware, cost or accuracy claims. These are future tasks, not completed work.

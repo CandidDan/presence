@@ -10,7 +10,7 @@ Keep the existing visual direction and “A reason to say hello.” The homepage
 
 This phase excludes perks, loyalty schemes, recruitment marketplaces, event platforms, AI matching, messaging and profile-building apps.
 
-Spaces could introduce Presence and give trial feedback. Participation does not require events or discounts. Small Bluetooth beacons are being investigated; hardware requirements, costs and accuracy remain unconfirmed. Interest is neither a commitment nor a public venue listing.
+Spaces could introduce Presence and give trial feedback. Participation does not require events or discounts. Small Bluetooth beacons are being investigated; hardware requirements, costs and accuracy remain unconfirmed. Explain how a trial could fit into a space and the intended benefit of helping regulars and newcomers connect. The proposed early-trial approach is for Presence to supply any required equipment instead of asking spaces to buy a beacon; this is exploratory, not an approved supply or funding commitment. Interest is neither a commitment nor a public venue listing.
 
 Both interest forms remain explicitly non-collecting previews until an approved backend and privacy configuration exist. Never simulate successful registration or collect personal data during development.
 
@@ -25,6 +25,6 @@ Both interest forms remain explicitly non-collecting previews until an approved 
 
 ## Launch blockers and possible follow-on work
 
-Registration needs an approved privacy notice naming the controller, contact, purpose, provider and deletion process, plus an approved backend configuration. The mark and wording remain provisional; the photograph is a generated placeholder. Local discovery needs technical and trial validation before any performance or hardware claims.
+Registration needs an approved privacy notice naming the controller, contact, purpose, provider and deletion process, plus an approved backend configuration. The mark and wording remain provisional; example photographs are from Unsplash and depict illustrative fictional profiles. Local discovery needs technical and trial validation before any performance or hardware claims.
 
 Backend integration, discovery experiments and public launch approval are follow-on work, not implemented features. This brief records direction, not proof that a task or gate has completed. Consult each PR for its verified scope and results.
