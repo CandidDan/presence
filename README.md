@@ -35,7 +35,9 @@ The consumer homepage links discreetly to `/spaces`, which uses the same split
 layout, shared styles and connection field. Its content carries over the trial
 walkthrough and proposed early equipment supply from the current main site.
 A shareable page for participating spaces is described as a proposed feature;
-this static preview does not create space pages or public listings.
+this static preview does not create live venue pages or public listings.
+`/spaces/example` shows a clearly fictional café host page, linked from `/spaces`.
+Any trial equipment is intended to be small and discreet; specifications remain exploratory.
 
 Both interest forms use the shared non-collecting preview handler. Buttons stay
 disabled until the handler is installed, so disabling JavaScript cannot submit

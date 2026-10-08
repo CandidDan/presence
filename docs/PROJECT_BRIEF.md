@@ -10,9 +10,9 @@ Keep the existing visual direction and “A reason to say hello.” The homepage
 
 This phase excludes perks, loyalty schemes, recruitment marketplaces, event platforms, AI matching, messaging and profile-building apps.
 
-Spaces could introduce Presence and give trial feedback. Participation does not require events or discounts. Small Bluetooth beacons are being investigated; hardware requirements, costs and accuracy remain unconfirmed. Explain how a trial could fit into a space and the intended benefit of helping regulars and newcomers connect. The proposed early-trial approach is for Presence to supply any required equipment instead of asking spaces to buy a beacon; this is exploratory, not an approved supply or funding commitment. Interest is neither a commitment nor a public venue listing.
+Spaces could introduce Presence and give trial feedback. Participation does not require events or discounts. Any trial equipment should be small and discreet, fitting quietly into the space; this is a design intention pending technical validation. Small Bluetooth beacons are being investigated; hardware requirements, costs and accuracy remain unconfirmed. Explain how a trial could fit into a space and the intended benefit of helping regulars and newcomers connect. The proposed early-trial approach is for Presence to supply any required equipment instead of asking spaces to buy a beacon; this is exploratory, not an approved supply or funding commitment. Interest is neither a commitment nor a public venue listing.
 
-A shareable page for participating spaces is a proposed benefit, independent of local discovery. Space pages are not built by this static preview, and interest never creates a page or public listing.
+A shareable page for participating spaces is a proposed benefit, independent of local discovery. A fictional static host-page example illustrates the proposed space page; no live venue pages or listing service are built by this preview, and interest never creates a page or public listing.
 
 Both interest forms remain explicitly non-collecting previews until an approved backend and privacy configuration exist. Never simulate successful registration or collect personal data during development.
 

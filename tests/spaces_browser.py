@@ -16,7 +16,7 @@ server = ThreadingHTTPServer(('127.0.0.1', 0), partial(Quiet, directory=str(ROOT
 Thread(target=server.serve_forever, daemon=True).start()
 base = 'http://127.0.0.1:' + str(server.server_port)
 try:
-    for route in ['/', '/spaces', '/spaces/', '/styles.css', '/field.js', '/preview.js']:
+    for route in ['/', '/spaces', '/spaces/', '/spaces/example', '/spaces/example/', '/styles.css', '/field.js', '/preview.js']:
         with urlopen(base + route) as response:
             assert response.status == 200
             assert response.read()
@@ -43,7 +43,7 @@ try:
                 if route == '/spaces':
                     assert page.locator('form input').count() == 7
                     assert page.locator('.trial-steps > li').count() == 3
-                    assert 'proposed feature' in page.locator('#space-page-h + p + p').inner_text()
+                    assert 'proposed feature' in page.locator('[aria-labelledby="space-page-h"] .small').inner_text()
                 page.keyboard.press('Tab')
                 assert page.locator('.skip').evaluate('e => document.activeElement === e')
                 page.keyboard.press('Enter')
@@ -82,7 +82,31 @@ try:
             assert 'A reason to say' in page.locator('h1').inner_text()
             page.locator('.spaces-invitation a').click()
             assert page.locator('#participation-h').is_visible()
-            print('PASS:', label, 'split layout, keyboard/navigation, labels and non-collecting forms')
+            assert 'small and discreet' in page.locator('.trial-equipment').inner_text()
+            page.locator('.example-link').click()
+            assert page.locator('#host-name').inner_text() == 'Common Ground'
+            assert 'Fictional example' in page.locator('.host-example-note').inner_text()
+            assert page.locator('form').count() == 0
+            assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+            assert page.locator('meta[name="robots"]').get_attribute('content') == 'noindex, nofollow'
+            assert page.locator('.host-details a').get_attribute('href') == 'https://example.com'
+            page.keyboard.press('Tab')
+            # Start a fresh navigation to test the example's own skip link.
+            page.goto(base + '/spaces/example', wait_until='networkidle')
+            page.keyboard.press('Tab')
+            assert page.locator('.skip').evaluate('e => document.activeElement === e')
+            page.keyboard.press('Enter')
+            assert page.url.endswith('#host-main')
+            for link, target in [('.host-nav a[href="#about-space"]', '#about-space'), ('.host-nav a[href="#conversation"]', '#conversation'), ('.host-nav a[href="#visit-space"]', '#visit-space')]:
+                page.locator(link).click()
+                assert page.url.endswith(target)
+            page.goto(base + '/spaces/example/', wait_until='networkidle')
+            if label in ['desktop', 'mobile']:
+                page.screenshot(path=str(SHOTS / ('host-' + label + '.png')), full_page=True)
+            page.locator('header a[href="/spaces"]').click()
+            assert page.locator('#participation-h').is_visible()
+            assert not errors, errors
+            print('PASS:', label, 'split layout, discreet equipment, example host page/navigation, labels and non-collecting forms')
             context.close()
         context = browser.new_context(java_script_enabled=False)
         page = context.new_page()
