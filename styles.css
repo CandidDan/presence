@@ -89,8 +89,10 @@ h1, h2, h3, p { margin: 0; }
 .bg-field .ring { fill: none; stroke: #F0A35E; stroke-width: 1.5; }
 .bg-field .wave { fill: none; stroke: #1B1A19; stroke-width: 1.2; }
 .bg-field .wave.t { stroke: #F0A35E; }
-.bg-field.compact { opacity: .6; }
-.bg-field.compact .ln { stroke-width: 2; }
+.bg-field[data-mode="desktop"] .p, .bg-field[data-mode="desktop"] .ring, .bg-field[data-mode="desktop"] .wave { opacity: .55; }
+.bg-field[data-mode="desktop"] .ln { opacity: .6; }
+.bg-field[data-mode="phone"] .ln { stroke-width: 2.5; }
+
 
 .shell { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 44fr) minmax(0, 56fr); min-height: 100vh; }
 .left { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; justify-content: space-between; padding: 28px 80px 32px 48px; }
@@ -119,7 +121,7 @@ h1, h2, h3, p { margin: 0; }
 .right #interest { max-width: 560px; }
 .rfoot { display: flex; flex-direction: column; gap: 6px; padding: 12vh 0 48px; max-width: 720px; border-top: 0; }
 
-@media (max-width: 1240px) {
+@media (min-width: 1024px) and (max-width: 1240px), (max-width: 719px) {
   .right .phones { grid-template-columns: minmax(0, 360px); }
   .right .phones .phone:nth-child(2) { margin-top: 0; }
 }
