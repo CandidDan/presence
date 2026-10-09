@@ -20,7 +20,10 @@ try:
         with urlopen(base + route) as response:
             assert response.status == 200
             assert response.read()
-    print('PASS: direct spaces routes and shared assets')
+    with urlopen(base + '/assets/presence-for-spaces.pdf') as response:
+        assert response.headers.get_content_type() == 'application/pdf'
+        assert response.read().startswith(b'%PDF-')
+    print('PASS: direct spaces routes, PDF and shared assets')
     with sync_playwright() as p:
         browser = p.chromium.launch(executable_path='/usr/bin/chromium', args=['--no-sandbox'])
         for label, width, height in [('desktop', 1440, 1000), ('tablet', 768, 1024), ('mobile', 390, 844), ('narrow', 320, 740)]:
@@ -93,6 +96,13 @@ try:
             page.locator('.spaces-invitation a').click()
             assert page.locator('#participation-h').is_visible()
             assert 'small and discreet' in page.locator('.trial-equipment').inner_text()
+            page.locator('.host-pack-link').focus()
+            with page.expect_download() as result:
+                page.keyboard.press('Enter')
+            download = result.value
+            assert download.suggested_filename == 'presence-for-spaces.pdf'
+            download.save_as(str(SHOTS / ('host-pack-' + label + '.pdf')))
+            assert (SHOTS / ('host-pack-' + label + '.pdf')).read_bytes().startswith(b'%PDF-')
             page.locator('.example-link').focus()
             page.keyboard.press('Enter')
             assert page.locator('#host-name').inner_text() == 'Common Ground'
