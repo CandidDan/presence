@@ -6,9 +6,9 @@ Static holding page for Presence ("A reason to say hello."). No build step: `ind
 
 Run locally: `npx serve .` (or any static server). Deployed via Vercel from `main`; `vercel.json` sets `X-Robots-Tag: noindex`.
 
-## Split-layout concept
+## Split layout
 
-On this exploration branch, the default straight connection eases into a person,
+The default straight connection eases into a person,
 briefly enlarges the orange dot, and holds through a wider scroll interval before
 withdrawing. A faint dashed circle identifies the target as the connection
 approaches. Before release, the target grows slightly and yields a few pixels;
@@ -68,3 +68,5 @@ The renderer uses bundled fonts/images through a temporary cloud asset server;
 no external services or network assets are needed. It checks image/font loading,
 page overflow and footer clearance before creating a tagged PDF.
 See [edition guidance](docs/host-pack/README.md) for manual photo/copy tailoring.
+
+`tests/browser_smoke.py` and `docs/VERIFICATION.md` retain the earlier layout’s checks and historical results. Use the two browser gates above for the current split layout.
