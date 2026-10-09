@@ -49,6 +49,7 @@ try:
                 page.keyboard.press('Tab')
                 assert page.locator('.skip').evaluate('e => e === document.activeElement')
                 page.keyboard.press('Enter')
+                page.wait_for_url('**#main')
                 assert page.url.endswith('#main')
                 if label in ['desktop', 'mobile']:
                     page.evaluate('document.activeElement.blur()')
