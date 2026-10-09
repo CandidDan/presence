@@ -8,6 +8,7 @@ window.PRESENCE_SIGNUP_CONFIG = window.PRESENCE_SIGNUP_CONFIG || {
   privacyApproved: false,
   // User confirmed double opt-in is enabled on both lists.
   doubleOptInVerified: true,
-  emailTrackingDisabled: false,
+  // User confirmed email-open and click tracking are off.
+  emailTrackingDisabled: true,
   consentVersion: 'presence-updates-v1'
 };
