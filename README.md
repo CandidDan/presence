@@ -53,3 +53,18 @@ keyboard/label checks and both forms, including JavaScript-disabled behavior.
 ## Provisional mark
 
 `mark.svg` is the shared loose-orbit mark for page headers, personal-page examples and the favicon. Outer dots vary subtly in angle and distance around a stable centre; the orange connection remains. See `docs/logo-review/index.html` for the old/new comparison at small and large sizes.
+
+## Host conversation pack
+
+`assets/presence-for-spaces.pdf` is a static four-page PDF linked from `/spaces`.
+The editable source and edition configuration are in `docs/host-pack/`.
+Rebuild in the prepared cloud environment (Python Playwright and Chromium):
+
+```sh
+python3 scripts/render_host_pack.py --screenshots docs/host-pack/review
+```
+
+The renderer uses bundled fonts/images through a temporary cloud asset server;
+no external services or network assets are needed. It checks image/font loading,
+page overflow and footer clearance before creating a tagged PDF.
+See [edition guidance](docs/host-pack/README.md) for manual photo/copy tailoring.

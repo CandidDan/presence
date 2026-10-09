@@ -31,4 +31,6 @@ Registration needs an approved privacy notice naming the controller, contact, pu
 
 Backend integration, discovery experiments and public launch approval are follow-on work, not implemented features. This brief records direction, not proof that a task or gate has completed. Consult each PR for its verified scope and results.
 
-A concise host PDF is proposed follow-on work for outreach or sharing after an initial conversation: purpose, hoped-for benefits, trial expectations and unresolved questions. Use a shared core with relevant space photography (host-supplied with permission or licensed). Tailoring and distribution are not implemented, and this does not enable registration or automatic email delivery.
+The chosen domain is meetpresence.com; Presence remains the brand. Domain purchase is user-reported; this work does not configure DNS or deployment.
+
+A static four-page host PDF supports outreach or sharing after an initial conversation: purpose, hoped-for benefits, trial expectations and unresolved questions. Its editable template supports manual editions with relevant photography (host-supplied with permission or licensed). The starter pack uses illustrative stock photographs, not participating venues. Automatic personalisation and distribution remain follow-on work; the PDF does not enable registration or email delivery.

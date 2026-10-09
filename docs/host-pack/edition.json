@@ -1,0 +1,11 @@
+{
+  "audience": "Cafés, coworking spaces & other welcoming places",
+  "edition_intro": "An invitation to explore how Presence could fit into a welcoming space like yours.",
+  "cover_photo": "assets/cafe.jpg",
+  "cover_alt": "A café interior with warm lighting and tables for visitors",
+  "cover_caption": "Everyday places can give people room to connect. Illustrative café photograph; not a participating venue.",
+  "context_photo": "assets/workspace.jpg",
+  "context_alt": "A bright shared workspace with tables and places to sit",
+  "context_caption": "A shared setting can support quiet work and optional conversation. Illustrative workspace photograph.",
+  "photo_credit": "Café and workspace photography via Unsplash"
+}
