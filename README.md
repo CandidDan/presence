@@ -36,7 +36,7 @@ layout, shared styles and connection field. Its content carries over the trial
 walkthrough and proposed early equipment supply from the current main site.
 A shareable page for participating spaces is described as a proposed feature;
 this static preview does not create live venue pages or public listings.
-`/spaces/example` shows a clearly fictional café host page, linked from `/spaces`.
+`/spaces` includes a compact fictional host-page example in the same phone frame as the personal examples. It links to the full café page at `/spaces/example`; both use the same original illustration.
 Any trial equipment is intended to be small and discreet; specifications remain exploratory.
 
 Both interest forms use the shared non-collecting preview handler. Buttons stay

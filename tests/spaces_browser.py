@@ -43,7 +43,17 @@ try:
                 if route == '/spaces':
                     assert page.locator('form input').count() == 7
                     assert page.locator('.trial-steps > li').count() == 3
-                    assert 'proposed feature' in page.locator('[aria-labelledby="space-page-h"] .small').inner_text()
+                    card = page.locator('.inline-host-example')
+                    assert 'Fictional example' in card.locator('figcaption').inner_text()
+                    assert card.locator('h3').inner_text() == 'Common Ground'
+                    assert card.locator('.chip').count() == 3
+                    assert 'not active' in card.inner_text()
+                    card.scroll_into_view_if_needed()
+                    assert card.locator('img').evaluate('e => e.complete && e.naturalWidth > 0')
+                    if label in ['desktop', 'mobile']:
+                        card.screenshot(path=str(SHOTS / ('inline-' + label + '.png')))
+                    page.goto(base + route, wait_until='networkidle')
+                    assert 'proposed feature' in page.locator('.space-page-status').inner_text()
                 page.keyboard.press('Tab')
                 assert page.locator('.skip').evaluate('e => document.activeElement === e')
                 page.keyboard.press('Enter')
@@ -83,7 +93,8 @@ try:
             page.locator('.spaces-invitation a').click()
             assert page.locator('#participation-h').is_visible()
             assert 'small and discreet' in page.locator('.trial-equipment').inner_text()
-            page.locator('.example-link').click()
+            page.locator('.example-link').focus()
+            page.keyboard.press('Enter')
             assert page.locator('#host-name').inner_text() == 'Common Ground'
             assert 'Fictional example' in page.locator('.host-example-note').inner_text()
             assert page.locator('form').count() == 0
