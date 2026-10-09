@@ -14,41 +14,60 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="page">
-  <header class="wrap" style="display: flex; align-items: center; justify-content: space-between; padding-top: 28px; padding-bottom: 28px;">
-    <a href="/" aria-label="Presence, top of page" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 500; font-size: 20px; letter-spacing: -.01em;">
-      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" focusable="false">
-        <circle cx="14" cy="14" r="3.6" fill="#1B1A19"></circle>
-        <circle cx="14" cy="4" r="1.8" fill="#CFCECA"></circle>
-        <circle cx="22.7" cy="9" r="1.8" fill="#F0A35E"></circle>
-        <circle cx="22.7" cy="19" r="1.8" fill="#CFCECA"></circle>
-        <circle cx="14" cy="24" r="1.8" fill="#CFCECA"></circle>
-        <circle cx="5.3" cy="19" r="1.8" fill="#CFCECA"></circle>
-        <circle cx="5.3" cy="9" r="1.8" fill="#CFCECA"></circle>
-        <line x1="17" y1="12.3" x2="21" y2="10" stroke="#F0A35E" stroke-width="1.8" stroke-linecap="round"></line>
-      </svg>
+<svg id="field" class="bg-field" aria-hidden="true" focusable="false"></svg>
+<div class="shell">
+  <aside class="left" id="top">
+    <div class="left-top">
+    <a href="/" aria-label="Presence homepage" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 500; font-size: 20px; letter-spacing: -.01em;">
+      <img src="/mark.svg" width="28" height="28" alt="">
       <span>Presence</span>
     </a>
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="/spaces" aria-current="page">For spaces</a>
-      <span class="pill" role="status"><i aria-hidden="true"></i>In development</span>
-    </nav>
-  </header>
+      <nav class="site-nav" aria-label="Main navigation"><a href="/">For people</a><span class="pill" role="status"><i aria-hidden="true"></i>In development</span></nav>
+    </div>
+    <div class="left-mid">
+      <h1 class="h1 h1-left">A place to say&nbsp;hello.</h1>
+      <p class="lede">For the places where people already spend time.</p>
+      <div class="left-cta">
+        <a class="btn" href="#space-interest">Explore a trial</a>
+        <span class="small">Introduce the idea. Help shape a small trial.</span>
+      </div>
+    </div>
+    <p class="small left-foot">Provisional mark and wording, pending approval.</p>
+  </aside>
 
-  <main id="main" tabindex="-1">
-    <section class="wrap spaces-hero" aria-labelledby="spaces-h">
-      <p class="eyebrow">For spaces</p>
-      <h1 id="spaces-h" class="h1">A place to say&nbsp;hello.</h1>
-      <p class="lede">A reason to say hello. In the places where people already spend time.</p>
-      <p class="body">Presence is a customisable, shareable personal page. People would choose separately whether to be discoverable nearby, with local visibility off by default. A little context could make an in-person connection easier.</p>
+  <main class="right" id="main" tabindex="-1">
+    <section class="rsec rsec-first" aria-label="Presence for spaces">
+      <p class="body body-lg">Presence is a customisable, shareable personal page. People would choose separately whether to be discoverable nearby, with local visibility off by default. A little context could make an in-person connection easier.</p>
+      <p class="lede lede-soft">A way for regulars and newcomers to find common ground.</p>
+      <p class="body">The aim is to help people feel more connected to your space and to one another. An early trial would explore that with you.</p>
       <p class="small">Automatic discovery without repeated venue check-ins is the ambition. The detection technology is not yet proven.</p>
-      <a class="btn" href="#space-interest">Explore a trial</a>
     </section>
-
-    <section class="wrap sec spaces-details" aria-labelledby="participation-h">
-      <h2 id="participation-h" class="section-heading">How a trial could work in your space.</h2>
-      <p class="lede trial-benefit">A way for regulars and newcomers to find common ground. The aim is to help people feel more connected to your space and to one another. An early trial would explore that with you.</p>
-      <ol class="how-grid trial-steps">
+    <section class="rsec" aria-labelledby="space-page-h">
+      <h2 id="space-page-h" class="h2">Your space, shared.</h2>
+      <p class="body">We’re exploring a shareable Presence page for each participating space: an introduction to the place, what it’s like and what people might connect over there. A simple link for your website, socials or a QR code in the space could be useful even before nearby discovery works.</p>
+      <figure class="inline-host-example" aria-labelledby="inline-host-caption">
+        <figcaption id="inline-host-caption" class="small">Fictional example · not a real venue</figcaption>
+        <div class="phone">
+          <div class="screen">
+            <div class="host-cover" aria-hidden="true"><img src="/assets/example-space.svg" width="640" height="260" alt="" loading="lazy"></div>
+            <div class="pbody">
+              <div class="host-identity"><span class="host-monogram" aria-hidden="true">CG</span><p class="pline">Café · Example town, UK</p></div>
+              <h3 class="name">Common Ground</h3>
+              <p class="quote">Good coffee. A little common ground.</p>
+              <p class="pline">A neighbourhood café for reading, small projects and unhurried conversations.</p>
+              <h4 class="prow-head">Say hello about</h4>
+              <div class="host-tags"><span class="chip">What you’re reading</span><span class="chip">Side projects</span><span class="chip">Local walks</span></div>
+              <p class="pline inline-host-note">Conversation is always optional. Nearby discovery is not active in this example.</p>
+            </div>
+          </div>
+        </div>
+      </figure>
+      <a class="example-link" href="/spaces/example">View the full example <span aria-hidden="true">↗</span></a>
+      <p class="small space-page-status">Space pages are a proposed feature. Registering interest would not create a page or a public venue listing.</p>
+    </section>
+    <section class="rsec" aria-labelledby="participation-h">
+      <h2 id="participation-h" class="h2">How a trial could work in your space.</h2>
+      <ol class="trial-steps">
         <li class="step">
           <h3>1. Plan a small trial together</h3>
           <p class="body">We’d agree how Presence could fit into your café, coworking space or other welcoming place, and a simple way to introduce it to visitors. Setup is still exploratory; small Bluetooth beacons are one approach we’re investigating.</p>
@@ -64,17 +83,14 @@
       </ol>
       <div class="copy-stack trial-equipment">
         <h3>Equipment for early trials</h3>
-        <p class="body">Our proposed approach is for Presence to supply any equipment needed for early trials, rather than asking spaces to buy a beacon to test the idea. The technology and trial terms still need to be worked out; hardware requirements and detection accuracy are not confirmed.</p>
+        <p class="body">Any equipment used in a trial would be intended to be small and discreet, fitting quietly into your space. Our proposed approach is for Presence to supply it for early trials, rather than asking spaces to buy a beacon to test the idea. The technology and trial terms still need to be worked out; hardware requirements and detection accuracy are not confirmed.</p>
       </div>
+      <p class="body">A little more context for a first conversation: <a class="host-pack-link" href="/assets/presence-for-spaces.pdf" type="application/pdf" download="presence-for-spaces.pdf">Read the host pack (PDF, 4 pages)</a>.</p>
     </section>
-
-    <section class="wrap sec" id="space-interest" aria-labelledby="space-interest-h">
-      <div class="wl-grid">
-        <div class="copy-stack">
-          <h2 id="space-interest-h" class="section-heading">Interested in exploring it?</h2>
-          <p class="body">Registering interest would not be a commitment to take part or create a public venue listing.</p>
-          <p class="small">This is a design preview. Before collecting anything, we need an approved privacy notice, a named data controller and contact, and a configured provider with a deletion process.</p>
-        </div>
+    <section class="rsec" id="space-interest" aria-labelledby="space-interest-h">
+      <h2 id="space-interest-h" class="h2">Interested in exploring it?</h2>
+      <p class="body">Registering interest would not be a commitment to take part or create a public venue listing.</p>
+      <p class="small">Before collecting anything, we need an approved privacy notice, a named data controller and contact, and a configured provider with a deletion process.</p>
         <form id="space-interest-form" class="copy-stack" data-preview-form aria-describedby="space-notice" novalidate>
           <div id="space-notice" class="notice" role="note"><p><strong>Design preview.</strong> This form doesn’t send or store anything. Space-interest registration is not open yet.</p></div>
           <div class="fld">
@@ -111,17 +127,15 @@
             <p id="space-form-msg" class="msg" role="status" aria-live="polite" hidden>Preview only — nothing was sent or stored. Space-interest registration opens once the privacy notice and provider are confirmed.</p>
           </div>
         </form>
-      </div>
     </section>
-  </main>
-  <footer class="foot">
-    <div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; padding-top: 32px; padding-bottom: 48px;">
+    <footer class="rfoot">
       <p class="small">Presence is in development. The mark and wording on this page are provisional and pending approval.</p>
       <p class="small">Preview build — not a public launch.</p>
-    </div>
-  </footer>
+    </footer>
 
+  </main>
 </div>
 <script src="/preview.js"></script>
+<script src="/field.js"></script>
 </body>
 </html>

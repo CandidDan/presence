@@ -14,105 +14,58 @@
 </head>
 <body>
 <a class="skip" href="#waitlist">Skip to waitlist</a>
-<div class="page" style="width: 100%; min-height: 100%; background: #F6F6F4; display: flex; flex-direction: column;">
 
-  <header class="wrap" style="display: flex; align-items: center; justify-content: space-between; padding-top: 28px; padding-bottom: 28px;">
+<svg id="field" class="bg-field" aria-hidden="true" focusable="false"></svg>
+
+<div class="shell">
+
+  <aside class="left" id="top">
+    <div class="left-top">
     <a href="#top" aria-label="Presence, top of page" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 500; font-size: 20px; letter-spacing: -.01em;">
-      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" focusable="false">
-        <circle cx="14" cy="14" r="3.6" fill="#1B1A19"></circle>
-        <circle cx="14" cy="4" r="1.8" fill="#CFCECA"></circle>
-        <circle cx="22.7" cy="9" r="1.8" fill="#F0A35E"></circle>
-        <circle cx="22.7" cy="19" r="1.8" fill="#CFCECA"></circle>
-        <circle cx="14" cy="24" r="1.8" fill="#CFCECA"></circle>
-        <circle cx="5.3" cy="19" r="1.8" fill="#CFCECA"></circle>
-        <circle cx="5.3" cy="9" r="1.8" fill="#CFCECA"></circle>
-        <line x1="17" y1="12.3" x2="21" y2="10" stroke="#F0A35E" stroke-width="1.8" stroke-linecap="round"></line>
-      </svg>
+      <img src="/mark.svg" width="28" height="28" alt="">
       <span>Presence</span>
     </a>
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="/spaces">For spaces</a>
-      <span class="pill" role="status"><i aria-hidden="true"></i>In development</span>
-    </nav>
-  </header>
-
-  <section class="hero" id="top" aria-labelledby="hero-h">
-    <div class="wrap hero-grid">
-      <div style="display: flex; flex-direction: column; gap: 36px;">
-        <h1 id="hero-h" class="h1">A reason to say&nbsp;hello.</h1>
-        <p class="lede">There’s more to the people around you than you can see.</p>
-        <p class="body">We’re building Presence: your own page, discoverable by people nearby when you choose. Share your interests, projects, work and whatever you’d like people to know.</p>
-        <p class="lede" style="font-size: 22px; color: #6E6B67;">A little context. An opening for a real conversation.</p>
-        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; padding-top: 8px;">
-          <a class="btn" href="#waitlist">Join the waitlist</a>
-          <span class="small" style="max-width: 30ch;">Help shape Presence and hear about the first local trials.</span>
-        </div>
-      </div>
-
-      <figure class="field drift" aria-hidden="true" style="margin: 0;">
-        <span class="dot" style="left: 12%; top: 18%;"></span>
-        <span class="dot" style="left: 30%; top: 8%;"></span>
-        <span class="dot" style="left: 54%; top: 12%;"></span>
-        <span class="dot" style="left: 80%; top: 10%;"></span>
-        <span class="dot" style="left: 92%; top: 30%;"></span>
-        <span class="dot" style="left: 8%; top: 44%;"></span>
-        <span class="dot" style="left: 24%; top: 36%;"></span>
-        <span class="dot" style="left: 86%; top: 56%;"></span>
-        <span class="dot" style="left: 16%; top: 70%;"></span>
-        <span class="dot" style="left: 38%; top: 84%;"></span>
-        <span class="dot" style="left: 62%; top: 92%;"></span>
-        <span class="dot" style="left: 76%; top: 78%;"></span>
-        <span class="dot" style="left: 94%; top: 88%;"></span>
-        <span class="dot" style="left: 46%; top: 62%;"></span>
-        <span class="dot" style="left: 28%; top: 56%;"></span>
-        <span class="dot" style="left: 66%; top: 44%;"></span>
-        <span class="link" style="left: 48%; top: 46%; width: 24%; transform: rotate(-32deg);"></span>
-        <span class="dot hi" style="left: 68.5%; top: 33.5%;"></span>
-        <span class="dot me" style="left: 48%; top: 46%;"></span>
-        <figcaption class="small" style="position: absolute; left: 0; bottom: -28px;">Provisional mark, pending approval.</figcaption>
-      </figure>
+      <nav class="site-nav" aria-label="Main navigation"><a href="/spaces">For spaces</a><span class="pill" role="status"><i aria-hidden="true"></i>In development</span></nav>
     </div>
-  </section>
-
-  <section class="wrap sec" aria-labelledby="how-h" style="padding-top: 128px; padding-bottom: 128px;">
-    <div style="display: flex; flex-direction: column; gap: 56px;">
-      <h2 id="how-h" class="h1" style="font-size: clamp(36px, 4.4vw, 60px); max-width: 16ch;">How it is intended to work</h2>
-      <div class="how-grid">
-        <article class="step">
-          <svg class="glyph" viewBox="0 0 72 72" aria-hidden="true" focusable="false">
-            <circle cx="36" cy="36" r="11" fill="#1B1A19"></circle>
-          </svg>
-          <h3>Your page</h3>
-          <p class="body" style="font-size: 17px;">Choose what you share and how you present it. Use your page as a normal link, too.</p>
-        </article>
-        <article class="step">
-          <svg class="glyph" viewBox="0 0 72 72" aria-hidden="true" focusable="false">
-            <circle cx="36" cy="36" r="11" fill="#1B1A19"></circle>
-            <circle cx="36" cy="36" r="26" fill="none" stroke="#CFCECA" stroke-width="2.5" stroke-dasharray="5 7" stroke-linecap="round"></circle>
-          </svg>
-          <h3>Your choice</h3>
-          <p class="body" style="font-size: 17px;">Your page and your local visibility are separate. Choose when you’re discoverable. Automatic nearby discovery is something we’re exploring—not a working feature we’re claiming today.</p>
-        </article>
-        <article class="step">
-          <svg class="glyph" viewBox="0 0 72 72" aria-hidden="true" focusable="false">
-            <circle cx="26" cy="42" r="11" fill="#1B1A19"></circle>
-            <line x1="35" y1="37" x2="48" y2="29" stroke="#F0A35E" stroke-width="4" stroke-linecap="round"></line>
-            <circle cx="52" cy="26" r="6" fill="#F0A35E"></circle>
-          </svg>
-          <h3>A reason to connect</h3>
-          <p class="body" style="font-size: 17px;">Discover what people around you have chosen to share. Something catches your attention. What happens next is yours.</p>
-        </article>
+    <div class="left-mid">
+      <h1 class="h1 h1-left">A reason to say&nbsp;hello.</h1>
+      <p class="lede">There’s more to the people around you than you can see.</p>
+      <div class="left-cta">
+        <a class="btn" href="#waitlist">Join the waitlist</a>
+        <span class="small">Help shape Presence and hear about the first local trials.</span>
       </div>
     </div>
-  </section>
+    <p class="small left-foot">Provisional mark and wording, pending approval.</p>
+  </aside>
 
-  <section class="dark sec" aria-labelledby="eg-h" style="padding-top: 112px; padding-bottom: 112px;">
-    <div class="wrap" style="display: flex; flex-direction: column; gap: 56px;">
-      <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px 48px;">
-        <h2 id="eg-h" class="h1" style="font-size: clamp(36px, 4.4vw, 60px); max-width: 14ch;">Enough to start a conversation.</h2>
-        <p class="body" style="max-width: 34ch;">Two example pages, as someone nearby would see them. Different people, same idea: a little context, shared on your terms.</p>
+  <main class="right" id="main">
+
+    <section class="rsec rsec-first" aria-label="What Presence is">
+      <p class="body body-lg">We’re building Presence: your own page, discoverable by people nearby when you choose. Share your interests, projects, work and whatever you’d like people to know.</p>
+      <p class="lede lede-soft">A little context. An opening for a real conversation.</p>
+    </section>
+
+    <section class="rsec" aria-labelledby="how-h">
+      <h2 id="how-h" class="h2">How it is intended to work</h2>
+      <div class="how-list">
+        <article class="step-row">
+          <svg class="glyph" viewBox="0 0 72 72" aria-hidden="true" focusable="false"><circle cx="36" cy="36" r="11" fill="#1B1A19"></circle></svg>
+          <div><h3>Your page</h3><p class="body">Choose what you share and how you present it. Use your page as a normal link, too.</p></div>
+        </article>
+        <article class="step-row">
+          <svg class="glyph" viewBox="0 0 72 72" aria-hidden="true" focusable="false"><circle cx="36" cy="36" r="11" fill="#1B1A19"></circle><circle cx="36" cy="36" r="26" fill="none" stroke="#CFCECA" stroke-width="2.5" stroke-dasharray="5 7" stroke-linecap="round"></circle></svg>
+          <div><h3>Your choice</h3><p class="body">Your page and your local visibility are separate. Choose when you’re discoverable. Automatic nearby discovery is something we’re exploring—not a working feature we’re claiming today.</p></div>
+        </article>
+        <article class="step-row">
+          <svg class="glyph" viewBox="0 0 72 72" aria-hidden="true" focusable="false"><circle cx="26" cy="42" r="11" fill="#1B1A19"></circle><line x1="35" y1="37" x2="48" y2="29" stroke="#F0A35E" stroke-width="4" stroke-linecap="round"></line><circle cx="52" cy="26" r="6" fill="#F0A35E"></circle></svg>
+          <div><h3>A reason to connect</h3><p class="body">Discover what people around you have chosen to share. Something catches your attention. What happens next is yours.</p></div>
+        </article>
       </div>
+    </section>
 
+    <section class="rsec" aria-labelledby="eg-h">
+      <h2 id="eg-h" class="h2">Enough to start a conversation.</h2>
+      <p class="body">Two example pages, as someone nearby would see them. Different people, same idea: a little context, shared on your terms.</p>
       <div class="phones">
 
         <figure class="phone" aria-label="Example page on a phone: Noor, photographer" style="margin: 0;">
@@ -120,7 +73,7 @@
             <div class="cover">
               <img src="assets/noor-work.jpg" alt="Coastline under soft grey light, rocks meeting the sea" style="display: block; width: 100%; height: 100%; object-fit: cover;">
               <div class="topbar">
-                <span class="mini-mark" aria-hidden="true"><i></i></span>
+                <span class="mini-mark" aria-hidden="true"><img src="/mark.svg" width="22" height="22" alt=""></span>
                 <span class="vis"><i aria-hidden="true"></i>Visible nearby</span>
               </div>
               <span class="photo-tag">Recent work · Headland, dawn</span>
@@ -160,7 +113,7 @@
         <figure class="phone" aria-label="Example page on a phone: Ada, potter" style="margin: 0;">
           <div class="screen">
             <div class="topbar topbar-light">
-              <span class="mini-mark" aria-hidden="true"><i></i></span>
+              <span class="mini-mark" aria-hidden="true"><img src="/mark.svg" width="22" height="22" alt=""></span>
               <span class="vis"><i aria-hidden="true"></i>Visible nearby</span>
             </div>
             <div class="pbody" style="padding-top: 8px;">
@@ -198,17 +151,11 @@
       </div>
 
       <p class="small">Illustrative examples, not real people or finished designs. Photographs via Unsplash: Annie Spratt, Daniel Gamez, Behnam Samipour.</p>
-    </div>
-  </section>
+    </section>
 
-  <section class="wrap sec" id="waitlist" aria-labelledby="wl-h" style="padding-top: 128px; padding-bottom: 128px;">
-    <div class="wl-grid">
-      <div style="display: flex; flex-direction: column; gap: 24px;">
-        <h2 id="wl-h" class="h1" style="font-size: clamp(40px, 5.6vw, 76px);">Join the waitlist</h2>
-        <p class="body">Joining does not create a public profile or make you locally discoverable.</p>
-        <p class="small" style="max-width: 44ch;">An approved privacy notice—naming the data controller, contact, purpose, provider and how to delete your details—will appear here before anything is collected. No analytics trackers run on this page.</p>
-      </div>
-
+    <section class="rsec" id="waitlist" aria-labelledby="wl-h">
+      <h2 id="wl-h" class="h2">Join the waitlist</h2>
+      <p class="body">Joining does not create a public profile or make you locally discoverable.</p>
       <form id="interest" data-preview-form aria-describedby="interest-notice" novalidate style="display: flex; flex-direction: column; gap: 24px;">
         <div class="notice" id="interest-notice" role="note">
           <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="8.5" fill="none" stroke="#F0A35E" stroke-width="1.8"></circle><circle cx="10" cy="10" r="2.6" fill="#F0A35E"></circle></svg>
@@ -230,30 +177,28 @@
         </div>
         <div class="chk"><input id="c-dev" name="dev" type="checkbox"><label for="c-dev">Email me about Presence development and the first local trials (optional)</label></div>
         <div style="display: flex; flex-direction: column; gap: 16px; align-items: flex-start;">
-          <button class="btn" type="submit" disabled>Join the waitlist</button>
-          <noscript><p class="small">This is a non-collecting preview. JavaScript is needed to try the preview button; nothing can be registered here.</p></noscript>
+          <button class="btn" type="submit" disabled>Join the waitlist</button><noscript><p class="small">Non-collecting preview. JavaScript is needed to try the preview button; registration is not open.</p></noscript>
           <p id="form-msg" class="msg" role="status" aria-live="polite" hidden>Preview only — nothing was sent or stored. The waitlist opens once the privacy notice and provider are confirmed.</p>
         </div>
       </form>
-    </div>
-  </section>
+      <p class="small">An approved privacy notice—naming the data controller, contact, purpose, provider and how to delete your details—will appear here before anything is collected. No analytics trackers run on this page.</p>
+    </section>
 
-  <aside class="wrap spaces-invitation" aria-labelledby="spaces-invitation-h">
-    <div>
+    <aside class="spaces-invitation" aria-labelledby="spaces-invitation-h">
       <h2 id="spaces-invitation-h">A welcoming space?</h2>
-      <p class="small">Run a café, coworking space or another place where people connect? Explore a future Presence trial.</p>
-    </div>
-    <a href="/spaces">For spaces <span aria-hidden="true">↗</span></a>
-  </aside>
+      <p class="body">Run a café, coworking space or another place where people connect? Explore a future Presence trial.</p>
+      <a href="/spaces">For spaces <span aria-hidden="true">↗</span></a>
+    </aside>
 
-  <footer class="foot">
-    <div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; padding-top: 32px; padding-bottom: 48px;">
+    <footer class="rfoot">
       <p class="small">Presence is in development. The mark and wording on this page are provisional and pending approval.</p>
       <p class="small">Preview build — not a public launch.</p>
-    </div>
-  </footer>
+    </footer>
 
+  </main>
 </div>
+
 <script src="preview.js"></script>
+<script src="field.js"></script>
 </body>
 </html>
