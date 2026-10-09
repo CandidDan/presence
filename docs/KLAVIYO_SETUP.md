@@ -1,6 +1,6 @@
 # Klaviyo activation
 
-The integration is prepared but disabled. No Klaviyo account settings, lists, flows, campaigns or emails were created or changed. Use only Klaviyo's **public company/site ID** in the browser. Private API keys never belong in source, a frontend environment variable or chat.
+The integration is prepared but disabled. This code does not create or change Klaviyo account settings, lists, flows or campaigns, and no emails were sent during development. Use only Klaviyo's **public company/site ID** in the browser. Private API keys never belong in source, a frontend environment variable or chat.
 
 ## What is implemented
 
@@ -19,7 +19,7 @@ The integration is prepared but disabled. No Klaviyo account settings, lists, fl
 4. Put the public site ID and the two public list IDs in `signup-config.js`. Set the verified hostname(s) explicitly in `allowedHosts`. Do not allow every Vercel preview hostname. Set `privacyApproved`, `doubleOptInVerified` and `emailTrackingDisabled` only after those checks are complete. `enabled` is the final activation switch.
 5. Complete an explicitly authorised provider test with controlled recipients before opening collection. Current browser tests mock **all** Klaviyo requests, so they send no email and do not validate the real account, CORS or double opt-in delivery. Record the test result and obtain approval of the final privacy configuration before activating real signup.
 
-The pending user inputs are the company/site ID, list IDs, legal operator/country/privacy contact, intended email scope and retention process. No account access exists in this cloud workspace. Do not ask for a private key as a workaround.
+The user-supplied public company/site ID and both list IDs are configured in `signup-config.js`. Remaining inputs are legal operator/country/privacy contact, intended email scope and retention process, plus confirmation of account opt-in/tracking settings and the allowed hostname. No account access exists in this cloud workspace. Do not ask for a private key as a workaround.
 
 ## Fields sent
 
