@@ -6,7 +6,8 @@ window.PRESENCE_SIGNUP_CONFIG = window.PRESENCE_SIGNUP_CONFIG || {
   lists: { people: 'SifbS6', spaces: 'STfekc' },
   allowedHosts: [],
   privacyApproved: false,
-  doubleOptInVerified: false,
+  // User confirmed double opt-in is enabled on both lists.
+  doubleOptInVerified: true,
   emailTrackingDisabled: false,
   consentVersion: 'presence-updates-v1'
 };
