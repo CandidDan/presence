@@ -30,3 +30,5 @@ Both interest forms remain explicitly non-collecting previews until an approved 
 Registration needs an approved privacy notice naming the controller, contact, purpose, provider and deletion process, plus an approved backend configuration. The mark and wording remain provisional; example photographs are from Unsplash and depict illustrative fictional profiles. Local discovery needs technical and trial validation before any performance or hardware claims.
 
 Backend integration, discovery experiments and public launch approval are follow-on work, not implemented features. This brief records direction, not proof that a task or gate has completed. Consult each PR for its verified scope and results.
+
+A concise host PDF is proposed follow-on work for outreach or sharing after an initial conversation: purpose, hoped-for benefits, trial expectations and unresolved questions. Use a shared core with relevant space photography (host-supplied with permission or licensed). Tailoring and distribution are not implemented, and this does not enable registration or automatic email delivery.

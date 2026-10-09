@@ -49,3 +49,7 @@ keyboard/label checks and both forms, including JavaScript-disabled behavior.
 ## Access gate
 
 `middleware.js` is a free edge gate: if the `PRESENCE_CODE` env var is set in Vercel, visitors see a code prompt and get a 30-day cookie on success. Delete the env var (and redeploy) to open the site. Don't use Vercel's built-in Password Protection — it is a paid add-on.
+
+## Provisional mark
+
+`mark.svg` is the shared loose-orbit mark for page headers, personal-page examples and the favicon. Outer dots vary subtly in angle and distance around a stable centre; the orange connection remains. See `docs/logo-review/index.html` for the old/new comparison at small and large sizes.
