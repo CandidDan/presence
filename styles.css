@@ -99,6 +99,7 @@ h1, h2, h3, p { margin: 0; }
 }
 
 
+.development-status { position: absolute; top: 28px; right: 48px; z-index: 2; }
 .shell { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 44fr) minmax(0, 56fr); min-height: 100vh; }
 .left { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; justify-content: space-between; padding: 28px 80px 32px 48px; }
 .left-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
@@ -157,9 +158,6 @@ h1, h2, h3, p { margin: 0; }
 form.copy-stack > .fld, form.copy-stack > .notice { width: 100%; }
 .right form[data-preview-form] { max-width: 560px; width: 100%; }
 .btn:disabled { opacity: .65; cursor: default; }
-@media (min-width: 1024px) and (max-width: 1240px), (max-width: 639px) {
-  .site-nav .pill { display: none; }
-}
 
 .right { padding: 0 56px 0 112px; }
 .rsec { display: flex; flex-direction: column; gap: 28px; padding: 18vh 0 4vh; max-width: 720px; }
@@ -183,8 +181,9 @@ form.copy-stack > .fld, form.copy-stack > .notice { width: 100%; }
   .right .phones .phone:nth-child(2) { margin-top: 0; }
 }
 @media (max-width: 1023px) {
+  .development-status { top: 24px; right: 24px; }
   .shell { grid-template-columns: minmax(0, 1fr); }
-  .left { position: relative; height: auto; min-height: 92vh; padding: 24px 24px 40px; gap: 48px; }
+  .left { position: relative; height: auto; min-height: 92vh; padding: 88px 24px 40px; gap: 48px; }
   .left-mid { margin-top: auto; }
   .right { padding: 0 24px; }
   .rsec, .rsec-first { padding-top: 64px; padding-bottom: 8px; }
