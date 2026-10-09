@@ -44,7 +44,7 @@ try:
                 for field in page.locator('form input').all():
                     assert page.locator('label[for="' + field.get_attribute('id') + '"]').count() == 1
                 if route == '/spaces':
-                    assert page.locator('form input').count() == 7
+                    assert page.locator('form input').count() == 8
                     assert page.locator('.trial-steps > li').count() == 3
                     card = page.locator('.inline-host-example')
                     assert 'Fictional example' in card.locator('figcaption').inner_text()

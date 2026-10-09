@@ -1,6 +1,6 @@
 // Free access gate for the preview: one shared code, set as PRESENCE_CODE in Vercel env.
 // Runs at the edge on every request. No code set → site is open.
-export const config = { matcher: ['/((?!assets/|mark.svg|styles.css|preview.js|field.js).*)'] };
+export const config = { matcher: ['/((?!assets/|mark.svg|styles.css|preview.js|signup-config.js|field.js).*)'] };
 
 const COOKIE = 'presence_gate';
 
@@ -11,7 +11,7 @@ async function token(code) {
 
 function page(error) {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>Presence — preview</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/fonts/outfit.css">
 <style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#F6F6F4;color:#1B1A19;font-family:Outfit,system-ui,sans-serif}
 form{width:min(92vw,380px);display:flex;flex-direction:column;gap:18px;padding:24px}
 h1{font-weight:300;font-size:40px;letter-spacing:-.03em;line-height:1;margin:0}p{margin:0;color:#6E6B67;font-size:15px}
