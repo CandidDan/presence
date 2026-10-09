@@ -27,7 +27,7 @@ for key in ['cover_photo', 'context_photo']:
     assets[key] = asset
 assets.update(mark=ROOT / 'mark.svg', example_art=ROOT / 'assets/example-space.svg')
 for weight in [300, 400, 500]:
-    assets['font_' + str(weight)] = PACK / f'assets/outfit-{weight}.ttf'
+    assets['font_' + str(weight)] = ROOT / f'assets/fonts/outfit-{weight}.ttf'
 class AssetServer(BaseHTTPRequestHandler):
     def log_message(self, *args):
         pass

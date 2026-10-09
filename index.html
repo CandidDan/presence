@@ -7,9 +7,7 @@
 <meta name="description" content="Presence is in development: your own page, discoverable by people nearby when you choose. Preview only.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="mark.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/fonts/outfit.css">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -163,7 +161,7 @@
         </div>
         <div class="fld">
           <label for="email">Email address</label>
-          <input id="email" name="email" type="email" autocomplete="email" inputmode="email">
+          <input id="email" name="email" type="email" data-live-required autocomplete="email" inputmode="email">
         </div>
         <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
           <div class="fld">
@@ -175,13 +173,14 @@
             <input id="country" name="country" type="text" autocomplete="country-name">
           </div>
         </div>
-        <div class="chk"><input id="c-dev" name="dev" type="checkbox"><label for="c-dev">Email me about Presence development and the first local trials (optional)</label></div>
+        <div class="chk"><input id="c-dev" name="dev" type="checkbox" data-email-consent><label for="c-dev">Email me about Presence development and the first local trials. I can unsubscribe at any time.</label></div>
         <div style="display: flex; flex-direction: column; gap: 16px; align-items: flex-start;">
           <button class="btn" type="submit" disabled>Join the waitlist</button><noscript><p class="small">Non-collecting preview. JavaScript is needed to try the preview button; registration is not open.</p></noscript>
           <p id="form-msg" class="msg" role="status" aria-live="polite" hidden>Preview only — nothing was sent or stored. The waitlist opens once the privacy notice and provider are confirmed.</p>
         </div>
       </form>
-      <p class="small">An approved privacy notice—naming the data controller, contact, purpose, provider and how to delete your details—will appear here before anything is collected. No analytics trackers run on this page.</p>
+      <p class="small">Read our <a href="/privacy">privacy notice</a> and <a href="/cookies">cookie information</a>.</p>
+      <p class="small" data-preview-only>An approved privacy notice—naming the data controller, contact, purpose, provider and how to delete your details—will appear here before anything is collected. No analytics trackers run on this page.</p>
     </section>
 
     <aside class="spaces-invitation" aria-labelledby="spaces-invitation-h">
@@ -193,11 +192,13 @@
     <footer class="rfoot">
       <p class="small">Presence is in development. The mark and wording on this page are provisional and pending approval.</p>
       <p class="small">Preview build — not a public launch.</p>
+      <nav class="legal-nav" aria-label="Site information"><a href="/privacy">Privacy</a><a href="/cookies">Cookies</a><a href="/terms">About this preview</a></nav>
     </footer>
 
   </main>
 </div>
 
+<script src="/signup-config.js"></script>
 <script src="preview.js"></script>
 <script src="field.js"></script>
 </body>

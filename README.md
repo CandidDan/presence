@@ -41,7 +41,7 @@ Any trial equipment is intended to be small and discreet; specifications remain 
 
 Both interest forms use the shared non-collecting preview handler. Buttons stay
 disabled until the handler is installed, so disabling JavaScript cannot submit
-field values. No backend, email provider or data collection is configured.
+field values. The prepared Klaviyo client integration is disabled; no email-provider IDs or live collection are configured.
 
 Run `python3 tests/spaces_browser.py` for routes, responsive layouts, navigation,
 keyboard/label checks and both forms, including JavaScript-disabled behavior.
@@ -70,3 +70,17 @@ page overflow and footer clearance before creating a tagged PDF.
 See [edition guidance](docs/host-pack/README.md) for manual photo/copy tailoring.
 
 `tests/browser_smoke.py` and `docs/VERIFICATION.md` retain the earlier layout’s checks and historical results. Use the two browser gates above for the current split layout.
+
+## Email signup and supporting pages
+
+`/privacy`, `/cookies` and `/terms` explain the current preview. The privacy
+notice is visibly a draft pending real controller/contact/retention details.
+Site fonts are served locally from `assets/fonts/`; no Google Fonts or Klaviyo
+tracking script loads when a page opens.
+
+`signup-config.js` is disabled by default. The shared form handler can submit to
+Klaviyo's public client-subscription API only after explicit consent and complete,
+approved configuration for an allowed hostname. See [activation requirements](docs/KLAVIYO_SETUP.md).
+No private key, new server backend, service provisioning or automatic email flow
+is included. Run `python3 tests/subscriptions_browser.py` for mocked-provider
+consent, payload, error, legal-page and configuration gates.

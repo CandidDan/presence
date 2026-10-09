@@ -2,7 +2,7 @@
 
 A four-page starter PDF for a first conversation with cafés, coworking spaces and other welcoming places. It explains the purpose, hoped-for benefits, proposed participation and unresolved questions. It makes no performance, revenue, hardware or equipment-funding promises. Current interest forms remain non-collecting.
 
-Source: `pack.html` (content/layout), `edition.json` (audience, introduction, photography/captions), `assets/` (licensed stock images and bundled fonts). Output: `../../assets/presence-for-spaces.pdf`. Page images in `review/` are review artifacts, not photographs of trial participants.
+Source: `pack.html` (content/layout), `edition.json` (audience, introduction, photography/captions), `assets/` (licensed stock images) and `../../assets/fonts/` (shared bundled fonts). Output: `../../assets/presence-for-spaces.pdf`. Page images in `review/` are review artifacts, not photographs of trial participants.
 
 From the repository root:
 
