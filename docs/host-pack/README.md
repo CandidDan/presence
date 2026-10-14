@@ -1,6 +1,6 @@
 # Host conversation pack
 
-A four-page starter PDF for a first conversation with cafés, coworking spaces and other welcoming places. It explains the purpose, hoped-for benefits, proposed participation and unresolved questions. It makes no performance, revenue, hardware or equipment-funding promises. Current interest forms remain non-collecting.
+A revised four-page host invitation for a first conversation with cafés, coworking spaces and other welcoming places. It explains the purpose, hoped-for benefits, proposed participation and unresolved questions. It makes no performance, revenue, hardware or equipment-funding promises. Current interest forms remain non-collecting.
 
 Source: `pack.html` (content/layout), `edition.json` (audience, introduction, photography/captions), `assets/` (licensed stock images) and `../../assets/fonts/` (shared bundled fonts). Output: `../../assets/presence-for-spaces.pdf`. Page images in `review/` are review artifacts, not photographs of trial participants.
 
@@ -22,6 +22,8 @@ python3 scripts/render_host_pack.py --edition /tmp/example-space/edition.json --
 
 Check the rendered pages before sharing: longer copy and different crops may need template adjustments. Source/permission details belong beside each edition. Never imply trial participation from a photo or tailored title.
 
-Manual editing/rendering is supported. No contact collection, registration trigger, personalised email or automatic distribution is implemented. The PDF links to the existing spaces preview; `meetpresence.com` has not been connected by this change.
+Manual editing/rendering is supported. No contact collection, registration trigger, personalised email or automatic distribution is implemented. The PDF links to `meetpresence.com/spaces` and the configured `hello@meetpresence.com` contact. A named sign-off is set through `sender_name` after the person is confirmed.
 
 See [asset sources and licences](assets/SOURCES.md). The stock edition can be shared under the recorded licences; creator attribution can be improved when photo-detail pages are accessible.
+
+The v2.1 brief, rejected noticeboard direction and before/after audits are in [the design review](../design-review/README.md). Use `--direction noticeboard` only to reproduce the deliberately bolder comparison; the public asset uses the practical invitation.

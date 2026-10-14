@@ -15,12 +15,15 @@ PACK = ROOT / 'docs/host-pack'
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--edition', type=Path, default=PACK / 'edition.json', help='Edition JSON; photo paths are relative to its directory')
 parser.add_argument('--output', type=Path, default=ROOT / 'assets/presence-for-spaces.pdf')
+parser.add_argument('--direction', choices=['invitation', 'noticeboard'], default='invitation')
 parser.add_argument('--screenshots', type=Path, help='Optional directory for page screenshots')
 args = parser.parse_args()
 edition_path = args.edition.resolve()
 values = json.loads(edition_path.read_text())
+values['direction'] = args.direction
+values.setdefault('sender_name', 'Presence')
 assets = {}
-for key in ['cover_photo', 'context_photo']:
+for key in ['cover_photo']:
     asset = (edition_path.parent / values[key]).resolve()
     if not asset.is_file():
         raise FileNotFoundError(asset)

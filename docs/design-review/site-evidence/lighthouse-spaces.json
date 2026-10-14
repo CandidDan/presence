@@ -1,0 +1,23 @@
+{
+  "url": "https://meetpresence.com/spaces",
+  "lighthouseVersion": "12.8.2",
+  "fetchTime": "2026-10-14T21:47:26.262Z",
+  "scores": {
+    "performance": 1,
+    "accessibility": 1
+  },
+  "metrics": {
+    "largest-contentful-paint": {
+      "numericValue": 1118.025,
+      "unit": "millisecond"
+    },
+    "total-blocking-time": {
+      "numericValue": 0,
+      "unit": "millisecond"
+    },
+    "cumulative-layout-shift": {
+      "numericValue": 0.0006782781716538865,
+      "unit": "unitless"
+    }
+  }
+}
