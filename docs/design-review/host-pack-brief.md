@@ -7,12 +7,12 @@ Rules: [core](https://github.com/CandidDan/mods/blob/aaf177483c33ae4158d4ecb43d7
 - I-3: see how an introduction could create a reason to talk, then understand the host's practical role.
 - I-4: inherit the site’s mark, cream/ink/orange palette and Outfit type; preserve voluntary participation and separate local visibility.
 - I-5: clarity wins ties.
-- I-6: four-page A4 tagged PDF, also viewed on screens. Four pages retain the existing download label while separating idea, participation, open questions and invitation.
+- I-6: five-page A4 tagged PDF, also viewed on screens. A photographic cover restores visual impact; the next four pages separate idea, participation, open questions and invitation. The download label is updated to five pages.
 - I-7: hypothesis: the example and plain host expectations are enough to make the proposal understandable. Needs three representative host sessions; do not call this validated.
 - I-8: warm, observant, direct. Reference outside software: an introduction pinned beside a neighbourhood café’s shared table. Signature: two readable interests joined by Presence’s dot/connector language, then repeated as visitor-choice cues. The motif carries the explanation even with the logo covered.
 - I-9: lead with a clearly fictional shared-interest moment before the usual product/benefits pitch. It serves the host's need to understand a visitor experience quickly without inventing trial results.
 
-## V-1 directions
+## V-1 directions — original four-page exploration
 
 **A — practical invitation (chosen).** Lighter headline, restrained layout, practical roles in two columns, a contextual photograph after the ask. Cover motif joins two interests; page 3 annotates a smaller proposed space page.
 
@@ -35,3 +35,9 @@ B differs in type, layout and mood. It was rejected because the oversized displa
 The configured `hello@meetpresence.com` address is used for a real contact route. The user confirmed Leah as the named sign-off. No founder story, quote, participant, partnership or testimonial was invented. Host-supplied permissioned photography remains available through edition configuration.
 
 No H waiver is requested. The actual print proof, real phone reading, screen-reader reading order, three-human two-second test, representative task sessions and final major-work ornament judgement remain needs Dan. This is a review-ready revision, not a claim that all human checks have passed.
+
+## Subsequent reader feedback
+
+The user requested an edge-to-edge photographic cover with “A reason to say hello.” The selected invitation now adds that cover and moves the mechanism to page 2, without repeating the large tagline there. One photo is used once, on the cover; a solid 60% black scrim keeps light text readable without a gradient wash. Worst-case text contrast over any photograph pixel is at least 5.30:1. The photograph is illustrative, credited and does not imply a participating venue. Physical print/stock checks remain needs Dan.
+
+“Local walks” is explicitly labelled the interest both example people share. Technical beacon language is removed from the host-facing pack; the proposal still says nearby discovery needs testing and that setup, costs and support would be agreed before participation. No technical claim or supply commitment is introduced.

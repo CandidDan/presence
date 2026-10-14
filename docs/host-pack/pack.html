@@ -84,10 +84,27 @@ strong{font-weight:500}
 .noticeboard .photo{height:40mm;margin-top:5mm}
 
 
+.photo-cover{color:#F6F6F4;display:flex;flex-direction:column}
+.cover-image,.cover-shade{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.cover-image{object-fit:cover;object-position:50% 50%}
+.cover-shade{background:rgba(0,0,0,.60)}
+.photo-cover .top,.photo-cover h1,.photo-cover .footer{z-index:1}
+.photo-cover .top{position:relative;margin-bottom:0}
+.photo-cover .brand img{background:#F6F6F4;border-radius:50%;padding:2px;box-sizing:content-box}
+.photo-cover h1{position:relative;font-size:60pt;margin-top:auto;margin-bottom:auto;font-weight:300;line-height:1.05}
+.photo-cover .footer{color:#F6F6F4}
 </style>
 </head>
 <body class="$direction">
 <main>
+<section class="page photo-cover" aria-labelledby="photo-cover-h">
+<img class="cover-image" src="$cover_photo" alt="" aria-hidden="true">
+<div class="cover-shade" aria-hidden="true"></div>
+<header class="top"><div class="brand"><img src="$mark" alt="">Presence</div></header>
+<h1 id="photo-cover-h">A reason to<br>say hello.</h1>
+<footer class="footer"><span>An invitation for welcoming spaces</span><span>1 of 5</span></footer>
+</section>
+
 <section class="page" aria-labelledby="cover-h">
 <header class="top">
 <div class="brand">
@@ -95,15 +112,15 @@ strong{font-weight:500}
 <p>For welcoming spaces</p>
 </header>
 <p class="label">$audience</p>
-<h1 id="cover-h" style="margin-top:5mm">A reason to<br>say hello.</h1>
+<h2 id="cover-h" style="margin-top:5mm">An interest<br>in common</h2>
 <p class="intro">$edition_intro</p>
 <figure class="moment">
 <figcaption>An imagined moment at a café. These introductions are fictional.</figcaption>
 <div class="introductions">
 <div class="introduction">
-<p>A visitor shares an interest</p>
+<p>You’re interested in</p>
 <p class="interest">Local walks</p>
-<p style="margin-top:3mm">A short introduction they choose to share.</p>
+<p style="margin-top:3mm">You choose to share it on your introduction.</p>
 </div>
 <svg class="linking" viewBox="0 0 80 80" aria-hidden="true">
 <circle cx="12" cy="40" r="7" fill="#1B1A19"/>
@@ -111,19 +128,19 @@ strong{font-weight:500}
 <circle cx="68" cy="40" r="7" fill="#F0A35E"/>
 </svg>
 <div class="introduction">
-<p>Someone notices common ground</p>
+<p>Someone else is too</p>
 <p class="interest">Local walks</p>
-<p style="margin-top:3mm">Something they might ask about in person.</p>
+<p style="margin-top:3mm">They choose to share it on theirs.</p>
 </div>
 </div>
-<p class="explain">The introduction gives them a starting point. Saying hello is still up to them.</p>
+<p class="explain">“Local walks” is the interest you have in common. It gives you something simple to ask about. Whether you say hello is up to you.</p>
 </figure>
 <p class="body">Presence would give people a shareable introduction to themselves: interests, projects and whatever they want others to know. They would choose separately whether to be discoverable nearby.</p>
-<p class="truth">Nearby discovery is still being investigated. This example shows the idea, not a working detection system or a trial result.</p>
+<p class="truth">We’re still working out how people could find these introductions nearby. This example shows the idea, not a live feature.</p>
 <p class="closing-line">We’re looking for places that would help us find out whether this is useful.</p>
 <footer class="footer">
 <span>Host invitation · October 2026</span>
-<span>1 of 4</span>
+<span>2 of 5</span>
 </footer>
 </section>
 <section class="page" aria-labelledby="host-h">
@@ -153,11 +170,10 @@ strong{font-weight:500}
 </section>
 </div>
 <p class="body">You wouldn’t need to organise events or offer discounts. The aim is to see whether a little context helps newcomers feel welcome and regulars find a reason to talk. That benefit still needs testing.</p>
-<img class="photo" src="$cover_photo" alt="$cover_alt">
-<p class="caption">$cover_caption</p>
+
 <footer class="footer">
 <span>A first conversation carries no commitment</span>
-<span>2 of 4</span>
+<span>3 of 5</span>
 </footer>
 </section>
 <section class="page" aria-labelledby="space-h">
@@ -192,14 +208,14 @@ strong{font-weight:500}
 </div>
 </div>
 <div class="questions">
-<h3>What still needs working out</h3>
-<p>Automatic discovery without repeated check-ins is the ambition. Small Bluetooth beacons are one approach being investigated; hardware requirements, costs and accuracy are not confirmed.</p>
-<p>Any equipment would be intended to be small and discreet. Our proposal is for Presence to supply it for early trials rather than ask hosts to buy a beacon. Supply and trial terms are not yet agreed.</p>
+<h3>Before a trial</h3>
+<p>We still need to test how nearby discovery would work in a real space, and whether visitors find it useful and comfortable.</p>
+<p>If a trial needs equipment, we want it to be small and discreet. We propose supplying it for early trials. We would agree what is needed, any costs and who helps before you decide to take part.</p>
 <p>The example above does not create a live venue page. Interest would not create a public listing.</p>
 </div>
 <footer class="footer">
 <span>Visitors control what they share</span>
-<span>3 of 4</span>
+<span>4 of 5</span>
 </footer>
 </section>
 <section class="page" aria-labelledby="invite-h">
@@ -241,12 +257,12 @@ strong{font-weight:500}
 </div>
 <p class="body">Before a trial, we would agree how visitors’ information is used, who handles questions, how long details are kept and how to stop. The website’s signup forms are still non-collecting previews.</p>
 <div class="credits">
-<p>Starter edition · the scenario and Common Ground are fictional. The photograph is illustrative and does not show a participating venue.</p>
+<p>Starter edition · the scenario and Common Ground are fictional. The cover photograph is illustrative and does not show a participating venue.</p>
 <p style="margin-top:3mm">$photo_credit · <a href="https://unsplash.com/license">Unsplash licence</a>. Outfit: SIL Open Font License. Version 2 · October 2026.</p>
 </div>
 <footer class="footer">
 <span>Presence · A reason to say hello.</span>
-<span>4 of 4</span>
+<span>5 of 5</span>
 </footer>
 </section>
 </main>

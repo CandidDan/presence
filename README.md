@@ -56,7 +56,7 @@ keyboard/label checks and both forms, including JavaScript-disabled behavior.
 
 ## Host conversation pack
 
-`assets/presence-for-spaces.pdf` is a static four-page PDF linked from `/spaces`.
+`assets/presence-for-spaces.pdf` is a static five-page PDF linked from `/spaces`.
 The editable source and edition configuration are in `docs/host-pack/`.
 Rebuild in the prepared cloud environment (Python Playwright and Chromium):
 

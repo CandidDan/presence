@@ -1,6 +1,6 @@
 # Host conversation pack
 
-A revised four-page host invitation for a first conversation with cafés, coworking spaces and other welcoming places. It explains the purpose, hoped-for benefits, proposed participation and unresolved questions. It makes no performance, revenue, hardware or equipment-funding promises. Current interest forms remain non-collecting.
+A revised five-page host invitation for a first conversation with cafés, coworking spaces and other welcoming places. It explains the purpose, hoped-for benefits, proposed participation and unresolved questions. It makes no performance, revenue, hardware or equipment-funding promises. Current interest forms remain non-collecting.
 
 Source: `pack.html` (content/layout), `edition.json` (audience, introduction, photography/captions), `assets/` (licensed stock images) and `../../assets/fonts/` (shared bundled fonts). Output: `../../assets/presence-for-spaces.pdf`. Page images in `review/` are review artifacts, not photographs of trial participants.
 
@@ -10,7 +10,7 @@ From the repository root:
 python3 scripts/render_host_pack.py --screenshots docs/host-pack/review
 ```
 
-Requires Python Playwright and `/usr/bin/chromium`, already available in the prepared cloud environment. This is a document-generation tool; the static site needs no build step. It serves only selected local assets to cloud Chromium, blocks external requests, verifies fonts/images, checks four-page layout and footer clearance, then prints a tagged PDF with an outline.
+Requires Python Playwright and `/usr/bin/chromium`, already available in the prepared cloud environment. This is a document-generation tool; the static site needs no build step. It serves only selected local assets to cloud Chromium, blocks external requests, verifies fonts/images, checks five-page layout and footer clearance, then prints a tagged PDF with an outline.
 
 ## A tailored edition
 

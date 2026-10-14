@@ -64,7 +64,7 @@ try:
         page.emulate_media(media='print')
         page.evaluate('document.fonts.ready')
         assert page.evaluate('Array.from(document.fonts).every(f => f.status === "loaded")'), 'Bundled fonts did not load'
-        assert page.locator('.page').count() == 4
+        assert page.locator('.page').count() == 5
         assert page.evaluate('Array.from(document.images).every(i => i.complete && i.naturalWidth > 0)')
         for i, sheet in enumerate(page.locator('.page').all(), 1):
             if args.screenshots:
@@ -72,7 +72,7 @@ try:
             # Fixed page layouts must fit before a PDF can be shared.
             assert sheet.evaluate('e => e.scrollHeight <= e.clientHeight && e.scrollWidth <= e.clientWidth'), f'Overflow on page {i}'
             footer_top = sheet.locator('.footer').bounding_box()['y']
-            for child in sheet.locator(':scope > *:not(.footer)').all():
+            for child in sheet.locator(':scope > *:not(.footer):not(.cover-image):not(.cover-shade)').all():
                 box = child.bounding_box()
                 assert box['y'] + box['height'] < footer_top, f'Content overlaps footer on page {i}'
         session = page.context.new_cdp_session(page)
