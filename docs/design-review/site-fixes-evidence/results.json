@@ -1,0 +1,308 @@
+[
+  {
+    "route": "/",
+    "label": "desktop",
+    "normal": {
+      "width": 1440,
+      "document": 1440
+    },
+    "text_spacing": {
+      "width": 1440,
+      "document": 1440
+    },
+    "text200": {
+      "width": 1440,
+      "document": 1440
+    },
+    "axe": []
+  },
+  {
+    "route": "/",
+    "label": "phone",
+    "normal": {
+      "width": 390,
+      "document": 390
+    },
+    "text_spacing": {
+      "width": 390,
+      "document": 390
+    },
+    "text200": {
+      "width": 390,
+      "document": 390
+    },
+    "axe": []
+  },
+  {
+    "route": "/",
+    "label": "narrow",
+    "normal": {
+      "width": 320,
+      "document": 320
+    },
+    "text_spacing": {
+      "width": 320,
+      "document": 320
+    },
+    "text200": {
+      "width": 320,
+      "document": 320
+    },
+    "axe": []
+  },
+  {
+    "route": "/spaces",
+    "label": "desktop",
+    "normal": {
+      "width": 1440,
+      "document": 1440
+    },
+    "text_spacing": {
+      "width": 1440,
+      "document": 1440
+    },
+    "text200": {
+      "width": 1440,
+      "document": 1440
+    },
+    "axe": []
+  },
+  {
+    "route": "/spaces",
+    "label": "phone",
+    "normal": {
+      "width": 390,
+      "document": 390
+    },
+    "text_spacing": {
+      "width": 390,
+      "document": 390
+    },
+    "text200": {
+      "width": 390,
+      "document": 390
+    },
+    "axe": []
+  },
+  {
+    "route": "/spaces",
+    "label": "narrow",
+    "normal": {
+      "width": 320,
+      "document": 320
+    },
+    "text_spacing": {
+      "width": 320,
+      "document": 320
+    },
+    "text200": {
+      "width": 320,
+      "document": 320
+    },
+    "axe": []
+  },
+  {
+    "route": "/spaces/example",
+    "label": "desktop",
+    "normal": {
+      "width": 1440,
+      "document": 1440
+    },
+    "text_spacing": {
+      "width": 1440,
+      "document": 1440
+    },
+    "text200": {
+      "width": 1440,
+      "document": 1440
+    },
+    "axe": []
+  },
+  {
+    "route": "/spaces/example",
+    "label": "phone",
+    "normal": {
+      "width": 390,
+      "document": 390
+    },
+    "text_spacing": {
+      "width": 390,
+      "document": 390
+    },
+    "text200": {
+      "width": 390,
+      "document": 390
+    },
+    "axe": []
+  },
+  {
+    "route": "/spaces/example",
+    "label": "narrow",
+    "normal": {
+      "width": 320,
+      "document": 320
+    },
+    "text_spacing": {
+      "width": 320,
+      "document": 320
+    },
+    "text200": {
+      "width": 320,
+      "document": 320
+    },
+    "axe": []
+  },
+  {
+    "route": "/privacy",
+    "label": "desktop",
+    "normal": {
+      "width": 1440,
+      "document": 1440
+    },
+    "text_spacing": {
+      "width": 1440,
+      "document": 1440
+    },
+    "text200": {
+      "width": 1440,
+      "document": 1440
+    },
+    "axe": []
+  },
+  {
+    "route": "/privacy",
+    "label": "phone",
+    "normal": {
+      "width": 390,
+      "document": 390
+    },
+    "text_spacing": {
+      "width": 390,
+      "document": 390
+    },
+    "text200": {
+      "width": 390,
+      "document": 390
+    },
+    "axe": []
+  },
+  {
+    "route": "/privacy",
+    "label": "narrow",
+    "normal": {
+      "width": 320,
+      "document": 320
+    },
+    "text_spacing": {
+      "width": 320,
+      "document": 320
+    },
+    "text200": {
+      "width": 320,
+      "document": 320
+    },
+    "axe": []
+  },
+  {
+    "route": "/cookies",
+    "label": "desktop",
+    "normal": {
+      "width": 1440,
+      "document": 1440
+    },
+    "text_spacing": {
+      "width": 1440,
+      "document": 1440
+    },
+    "text200": {
+      "width": 1440,
+      "document": 1440
+    },
+    "axe": []
+  },
+  {
+    "route": "/cookies",
+    "label": "phone",
+    "normal": {
+      "width": 390,
+      "document": 390
+    },
+    "text_spacing": {
+      "width": 390,
+      "document": 390
+    },
+    "text200": {
+      "width": 390,
+      "document": 390
+    },
+    "axe": []
+  },
+  {
+    "route": "/cookies",
+    "label": "narrow",
+    "normal": {
+      "width": 320,
+      "document": 320
+    },
+    "text_spacing": {
+      "width": 320,
+      "document": 320
+    },
+    "text200": {
+      "width": 320,
+      "document": 320
+    },
+    "axe": []
+  },
+  {
+    "route": "/terms",
+    "label": "desktop",
+    "normal": {
+      "width": 1440,
+      "document": 1440
+    },
+    "text_spacing": {
+      "width": 1440,
+      "document": 1440
+    },
+    "text200": {
+      "width": 1440,
+      "document": 1440
+    },
+    "axe": []
+  },
+  {
+    "route": "/terms",
+    "label": "phone",
+    "normal": {
+      "width": 390,
+      "document": 390
+    },
+    "text_spacing": {
+      "width": 390,
+      "document": 390
+    },
+    "text200": {
+      "width": 390,
+      "document": 390
+    },
+    "axe": []
+  },
+  {
+    "route": "/terms",
+    "label": "narrow",
+    "normal": {
+      "width": 320,
+      "document": 320
+    },
+    "text_spacing": {
+      "width": 320,
+      "document": 320
+    },
+    "text200": {
+      "width": 320,
+      "document": 320
+    },
+    "axe": []
+  }
+]

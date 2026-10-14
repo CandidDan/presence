@@ -41,7 +41,7 @@ Any trial equipment is intended to be small and discreet; specifications remain 
 
 Both interest forms use the shared non-collecting preview handler. Buttons stay
 disabled until the handler is installed, so disabling JavaScript cannot submit
-field values. The prepared Klaviyo client integration is disabled; no email-provider IDs or live collection are configured.
+field values. The prepared Klaviyo client integration is disabled; public site/list IDs are configured, but live collection remains disabled.
 
 Run `python3 tests/spaces_browser.py` for routes, responsive layouts, navigation,
 keyboard/label checks and both forms, including JavaScript-disabled behavior.
@@ -84,3 +84,17 @@ approved configuration for an allowed hostname. See [activation requirements](do
 No private key, new server backend, service provisioning or automatic email flow
 is included. Run `python3 tests/subscriptions_browser.py` for mocked-provider
 consent, payload, error, legal-page and configuration gates.
+
+## Design audit regression checks
+
+`python3 tests/design_browser.py` tests all six public routes at 1440, 390 and
+320px with normal text, 200% text and prescribed text spacing. It also checks
+keyboard status focus, actual contrast ratios and honest preview actions using
+only its temporary cloud server. Review evidence is written to
+`/tmp/presence-design-checks`.
+
+The shared stylesheet has eight named spacing steps, seven type roles and
+semantic colour roles. The largest spacing step responds to viewport height
+within reading sections; profile spacing stays fixed. Component dimensions
+(phone frames, avatars, glyphs and radii) remain separate from the spacing scale.
+See [the v2.1 fixes and remaining human review](docs/design-review/site-fixes-v21.md).

@@ -20,6 +20,7 @@ Both interest forms remain explicitly non-collecting previews until an approved 
 
 - Start from the latest default branch, read the README and open PRs, and respect concurrent changes. Extend the existing site rather than replacing it.
 - Use the cloud workspace for checkout, development, browser testing and gates. Do not use the user's Mac or start local Docker. Use the existing isolated checkout; do not create worktrees unless requested.
+- Leah signs off design changes before they are treated as approved. Browser checks and an agent audit do not replace that review.
 - Retain the static-site approach unless a demonstrated need requires otherwise. Share styles and preview behavior; avoid duplicate specifications.
 - Follow repository instructions, including `.flow/PROTOCOL.md` if added. No Flow automation is currently installed in this repository.
 - Test desktop and mobile layout, navigation, keyboard use, form behavior (including JavaScript disabled) and direct `/spaces` routing. Use synthetic data only against the cloud development server; never submit test data to production.

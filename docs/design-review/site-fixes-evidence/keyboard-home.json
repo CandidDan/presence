@@ -1,0 +1,191 @@
+[
+  {
+    "tag": "A",
+    "id": "",
+    "text": "Skip to waitlist",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 12,
+    "bottom": 48
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "Presence",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 31,
+    "bottom": 59
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "For spaces",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 24,
+    "bottom": 66
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "Explore early access",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 638.484375,
+    "bottom": 690.484375
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "@noor.shoots\n\u203a",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 477.171875,
+    "bottom": 523.171875
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "noor.example \u2014 portfolio\n\u203a",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 523.171875,
+    "bottom": 603.171875
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "Prints and commissions\n\u203a",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 603.171875,
+    "bottom": 650.171875
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "Studio shop\n\u203a",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 437.359375,
+    "bottom": 483.359375
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "@ada.throws\n\u203a",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 483.359375,
+    "bottom": 530.359375
+  },
+  {
+    "tag": "INPUT",
+    "id": "email",
+    "text": "",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 472.734375,
+    "bottom": 526.734375
+  },
+  {
+    "tag": "INPUT",
+    "id": "town",
+    "text": "",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 579.734375,
+    "bottom": 633.734375
+  },
+  {
+    "tag": "INPUT",
+    "id": "country",
+    "text": "",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 579.734375,
+    "bottom": 633.734375
+  },
+  {
+    "tag": "INPUT",
+    "id": "c-dev",
+    "text": "",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 661.734375,
+    "bottom": 685.734375
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "text": "Try the form preview",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 729.328125,
+    "bottom": 781.328125
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "privacy notice",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 806.328125,
+    "bottom": 824.328125
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "cookie information",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 806.328125,
+    "bottom": 824.328125
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "For spaces \u2197",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 702.703125,
+    "bottom": 747.703125
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "Privacy",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 917.703125,
+    "bottom": 951.703125
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "Cookies",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 917.703125,
+    "bottom": 951.703125
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "About this preview",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 917.703125,
+    "bottom": 951.703125
+  },
+  {
+    "tag": "BODY",
+    "id": "",
+    "text": "Skip to waitlist\nIn development\nPresence\nFor spaces\nA reason",
+    "outline": "rgb(27, 26, 25) none 3px",
+    "color": "rgb(27, 26, 25)",
+    "top": -3180,
+    "bottom": 999.703125
+  }
+]
