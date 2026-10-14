@@ -32,6 +32,6 @@ B differs in type, layout and mood. It was rejected because the oversized displa
 
 ## Human content and review status
 
-The configured `hello@meetpresence.com` address is used for a real contact route. A named sign-off was requested from Dan; until supplied the signature is simply Presence. No founder story, quote, participant, partnership or testimonial was invented. Host-supplied permissioned photography remains available through edition configuration.
+The configured `hello@meetpresence.com` address is used for a real contact route. The user confirmed Leah as the named sign-off. No founder story, quote, participant, partnership or testimonial was invented. Host-supplied permissioned photography remains available through edition configuration.
 
 No H waiver is requested. The actual print proof, real phone reading, screen-reader reading order, three-human two-second test, representative task sessions and final major-work ornament judgement remain needs Dan. This is a review-ready revision, not a claim that all human checks have passed.

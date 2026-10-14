@@ -6,7 +6,7 @@
 | S-11 / S-26 | pass | Words explain the mechanism; both the scenario and venue are explicitly fictional, photo is stock; no invented evidence. |
 | S-21 / S-32 | pass | Internal privacy terminology replaced with visitor-information choices; non-sequence category numbers removed. Page counts are actual pagination. |
 | H-20 | pass | Repeated caps, category numbering, left-border callout and heavy phone frame replaced by the content-led connection motif and simpler hierarchy. |
-| H-18 | needs Dan | Concrete scenario, useful photo caption and configured contact improve specificity. Named author confirmation and actual host content are still pending. |
+| H-18 | pass | Concrete scenario, useful photo caption, configured contact and user-confirmed Leah sign-off improve specificity. Real host content is not invented. |
 | V-4 | pass | Static applicable checks: selectable/tagged text, fonts/images loaded, no clipping/footer overlap, valid email/domain link annotations. Not a PDF/UA certification. |
 | V-5 | needs Dan | Agent critique finds a stronger signature and the top three changes are addressed. Independent logo-swap/perception and final major-work ornament judgement are not complete. |
 | V-3 / V-6 / S-33 | needs Dan | No fresh independent perception test or three representative host sessions performed. |
@@ -21,7 +21,7 @@ Verdict: the mechanism is concrete, host expectations are earlier, and the conta
 
 1. Cover explains a specific visitor moment and separates sharing from optional discovery. No automatic scanning or proven hardware is implied.
 2. Page 2 makes host expectations and trial arrangements visible. Page 3 reduces the example’s visual weight and gives unresolved equipment/detection its own plain section. No category numbers remain.
-3. Page 4 uses a direct contact and questions a host can answer, including what would make them say no. Email/domain links use meetpresence.com. The signature remains the brand pending a confirmed author.
+3. Page 4 uses a direct contact and questions a host can answer, including what would make them say no. Email/domain links use meetpresence.com. Leah signs off, as confirmed by the user.
 
 ## Page verdicts
 
@@ -40,4 +40,4 @@ Phone fit-to-page viewing still makes an A4 document small; a real-device readin
 - `tests/spaces_browser.py`: route/PDF/keyboard/form gates passed at 1440/768/390/320px, including JavaScript disabled. Synthetic entries only on temporary cloud server.
 - Production website code/configuration is unchanged. All site-audit failures are reported separately and are not disguised as fixed by this PDF revision.
 
-Not tested: human perception/tasks, actual paper stock, PDF screen reader, a named sign-off, or new trials. No production publication is performed by this PR.
+Not tested: human perception/tasks, actual paper stock, PDF screen reader, or new trials. No production publication is performed by this PR.
