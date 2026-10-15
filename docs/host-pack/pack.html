@@ -2,66 +2,268 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Presence — a conversation with your space</title>
-<meta name="description" content="An exploratory host pack for Presence: purpose, potential benefits, trial expectations and open questions.">
+<title>Presence — an invitation to spaces</title>
 <style>
+
 @font-face{font-family:Outfit;src:url('$font_300');font-weight:300}
 @font-face{font-family:Outfit;src:url('$font_400');font-weight:400}
 @font-face{font-family:Outfit;src:url('$font_500');font-weight:500}
+
 @page{size:A4;margin:0}
-*{box-sizing:border-box}body{margin:0;background:#F6F6F4;color:#1B1A19;font:400 11pt/1.48 Outfit,sans-serif}h1,h2,h3,p{margin:0}h1,h2{font-weight:300;letter-spacing:-.035em;line-height:1.05}h1{font-size:48pt}h2{font-size:34pt}h3{font-weight:500;font-size:14pt;line-height:1.25}a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}strong{font-weight:500}.page{width:210mm;height:297mm;padding:17mm 19mm 15mm;position:relative;break-after:page;overflow:hidden}.page:last-child{break-after:auto}.brand{display:flex;align-items:center;gap:9px;font-size:16pt;font-weight:500}.brand img{width:28px;height:28px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14mm}.eyebrow{font-size:9pt;letter-spacing:.05em;text-transform:uppercase;color:#6E6B67}.intro{font-size:15pt;line-height:1.4;font-weight:300;max-width:150mm;margin-top:6mm}.body{margin-top:5mm;max-width:153mm}.muted{color:#6E6B67}.hero{margin-top:10mm;width:100%;height:94mm;object-fit:cover;border-radius:3mm}.caption{font-size:8pt;line-height:1.4;color:#6E6B67;margin-top:3mm}.cover-bottom{display:flex;gap:8mm;align-items:center;margin-top:9mm}.motif{flex:none;width:42mm;height:24mm}.cover-bottom p{font-size:13pt;font-weight:300;max-width:108mm}.footer{position:absolute;bottom:12mm;left:19mm;right:19mm;display:flex;justify-content:space-between;gap:10mm;font-size:8pt;color:#6E6B67;border-top:1px solid #DCDBD7;padding-top:4mm}.rows{margin-top:9mm;display:flex;flex-direction:column;gap:6mm}.row{display:grid;grid-template-columns:10mm 1fr;gap:4mm;border-top:1px solid #DCDBD7;padding-top:5mm}.number{font-size:18pt;font-weight:300;color:#B9731F}.row p{margin-top:2mm}.note{background:#ECEBE7;border-radius:3mm;padding:5mm 6mm;margin-top:7mm;font-size:10pt}.photo-strip{width:100%;height:47mm;object-fit:cover;border-radius:3mm;margin-top:8mm}.columns{display:grid;grid-template-columns:1fr 1fr;gap:9mm;margin-top:9mm}.phone{background:#1B1A19;border-radius:9mm;padding:3mm;width:76mm;margin:0 auto}.screen{border-radius:6mm;background:#F6F6F4;overflow:hidden}.screen img{width:100%;display:block}.profile{padding:5mm}.profile h3{font-size:18pt;font-weight:400;letter-spacing:-.02em}.profile p{font-size:10pt;margin-top:3mm}.tags{display:flex;gap:2mm;flex-wrap:wrap;margin-top:4mm}.tag{background:white;border:1px solid #DCDBD7;border-radius:20px;padding:1.5mm 3mm;font-size:8pt}.phone-label{text-align:center;margin-bottom:3mm;font-size:8pt;color:#6E6B67}.side-copy h3{margin-bottom:3mm}.side-copy p{font-size:10.5pt}.side-copy h3:not(:first-child){margin-top:7mm}.equipment{border-top:1px solid #DCDBD7;padding-top:5mm;margin-top:8mm}.equipment p{margin-top:3mm;font-size:10pt}.questions{padding-left:5mm;margin:7mm 0 0}.questions li{padding-left:2mm;margin-top:3mm}.closing{margin-top:8mm;border-left:3px solid #F0A35E;padding-left:5mm}.closing h3{font-size:18pt;font-weight:300}.closing p{margin-top:3mm}.credits{margin-top:7mm;font-size:8pt;line-height:1.45;color:#6E6B67}.link{display:inline-block;margin-top:5mm;font-weight:500}.tiny{font-size:9pt;margin-top:3mm}
-.trial-page .top{margin-bottom:10mm}.trial-page .columns{margin-top:6mm;gap:7mm}.trial-page .phone{width:68mm}.trial-page .profile{padding:4mm}.trial-page .profile p{margin-top:2mm;font-size:9pt}.trial-page .side-copy p{font-size:10pt}.trial-page .side-copy h3:not(:first-child){margin-top:5mm}.trial-page .equipment{margin-top:6mm;padding-top:4mm}.trial-page .note{margin-top:5mm;font-size:9pt;padding:4mm 5mm}</style>
+*{box-sizing:border-box}
+body{margin:0;background:#F6F6F4;color:#1B1A19;font:400 11pt/1.5 Outfit,sans-serif}
+h1,h2,h3,p,figure{margin:0}
+h1,h2{font-weight:300;letter-spacing:-.035em;line-height:1.1}
+h1{font-size:42pt}
+h2{font-size:34pt}
+h3{font-size:16pt;font-weight:500;line-height:1.2}
+a{color:inherit;text-underline-offset:3px}
+strong{font-weight:500}
+.page{width:210mm;height:297mm;padding:17mm 19mm 18mm;position:relative;break-after:page;overflow:hidden}
+.page:last-child{break-after:auto}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:13mm;gap:10mm;font-size:10pt}
+.brand{display:flex;align-items:center;gap:9px;font-weight:500;font-size:16pt}
+.brand img{width:28px;height:28px}
+.label{font-size:10pt;color:#5E5B57}
+.intro{font-size:15pt;font-weight:300;line-height:1.45;margin-top:6mm}
+.body{margin-top:5mm}
+.footer{position:absolute;bottom:12mm;left:19mm;right:19mm;font-size:9pt;display:flex;justify-content:space-between;color:#5E5B57}
+.moment{margin-top:11mm}
+.moment figcaption{font-size:10pt;margin-bottom:5mm}
+.introductions{display:grid;grid-template-columns:1fr 15mm 1fr;align-items:center;gap:5mm}
+.introduction{padding:5mm 0;border-top:2px solid #1B1A19;border-bottom:1px solid #CFCECA}
+.introduction .interest{font-size:27pt;font-weight:300;line-height:1.12;margin-top:3mm}
+.introduction p{font-size:10pt}
+.linking{display:block;width:100%;height:18mm}
+.moment .explain{font-size:12pt;margin-top:5mm}
+.truth{margin-top:7mm;font-size:10pt;color:#33312E}
+.closing-line{margin-top:12mm;font-size:22pt;font-weight:300;line-height:1.3;max-width:140mm}
+.roles{display:grid;grid-template-columns:1fr 1fr;gap:10mm;margin-top:9mm}
+.roles ul{padding-left:5mm;margin:4mm 0 0}
+.roles li{margin:0 0 4mm}
+.roles h3{margin-bottom:3mm}
+.photo{width:100%;height:58mm;object-fit:cover;margin-top:8mm}
+.caption{font-size:9pt;color:#5E5B57;margin-top:3mm;line-height:1.5}
+.example-layout{display:grid;grid-template-columns:72mm 1fr;gap:9mm;margin-top:8mm;align-items:start}
+.example{background:white;border:1px solid #CFCECA}
+.example img{width:100%;height:auto;display:block}
+.example-content{padding:5mm}
+.example-content h3{font-size:19pt;font-weight:400;letter-spacing:-.02em}
+.example-content p{font-size:10pt;margin-top:3mm}
+.topics{font-size:12pt!important;font-weight:500}
+.annotations p{margin-top:3mm}
+.annotations h3:not(:first-child){margin-top:7mm}
+.questions{margin-top:8mm;padding-top:5mm;border-top:1px solid #CFCECA}
+.questions h3{margin-bottom:4mm}
+.questions p{margin-top:3mm;font-size:10.5pt}
+.prompts{margin-top:9mm;display:flex;flex-direction:column;gap:6mm}
+.prompt{display:flex;gap:5mm;align-items:start}
+.prompt svg{width:8mm;height:8mm;flex:none;margin-top:1mm}
+.prompt p{font-size:15pt;font-weight:300;line-height:1.4}
+.invite{margin-top:11mm}
+.invite h3{font-size:24pt;font-weight:300;letter-spacing:-.02em}
+.contact{display:inline-block;font-size:21pt;font-weight:400;margin-top:5mm;text-decoration-thickness:1px}
+.signature{margin-top:6mm;font-size:12pt}
+.credits{font-size:9pt;color:#5E5B57;line-height:1.5;margin-top:9mm}
+.site-link{margin-top:5mm;display:inline-block;font-size:11pt}
+.noticeboard .page:first-child{background:#1B1A19;color:#F6F6F4}
+.noticeboard .page:first-child h1{font-size:61pt;font-weight:500;max-width:160mm}
+.noticeboard .page:first-child .label,.noticeboard .page:first-child .truth,.noticeboard .page:first-child .footer{color:#CFCECA}
+.noticeboard .page:first-child .brand img{background:#F6F6F4}
+.noticeboard .page:first-child .top{margin-bottom:8mm}
+.noticeboard .page:first-child .intro{font-size:13pt}
+.noticeboard .page:first-child .introduction{border-color:#CFCECA}
+.noticeboard .page:first-child .introduction .interest{font-weight:500;font-size:24pt}
+.noticeboard .page:first-child .moment{margin-top:7mm}
+.noticeboard .page:first-child .closing-line{font-size:17pt;margin-top:7mm}
+.noticeboard .linking circle:first-child{fill:#F6F6F4}
+.noticeboard h2{font-size:42pt;font-weight:500}
+.noticeboard .roles{display:flex;flex-direction:column;gap:5mm}
+.noticeboard .roles ul{display:flex;gap:8mm;list-style:none;padding:0}
+.noticeboard .roles li{flex:1}
+.noticeboard .photo{height:40mm;margin-top:5mm}
+
+
+.photo-cover{color:#F6F6F4;display:flex;flex-direction:column}
+.cover-image,.cover-shade{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.cover-image{object-fit:cover;object-position:50% 50%}
+.cover-shade{background:rgba(0,0,0,.60)}
+.photo-cover .top,.photo-cover h1,.photo-cover .footer{z-index:1}
+.photo-cover .top{position:relative;margin-bottom:0}
+.photo-cover .brand img{background:#F6F6F4;border-radius:50%;padding:2px;box-sizing:content-box}
+.photo-cover h1{position:relative;font-size:60pt;margin-top:auto;margin-bottom:auto;font-weight:300;line-height:1.05}
+.photo-cover .footer{color:#F6F6F4}
+</style>
 </head>
-<body>
+<body class="$direction">
 <main>
-<section class="page" aria-labelledby="cover-heading">
-  <header class="top"><div class="brand"><img src="$mark" alt="">Presence</div><span class="eyebrow">A host conversation pack</span></header>
-  <p class="eyebrow">$audience</p>
-  <h1 id="cover-heading" style="margin-top:5mm">A reason to<br>say hello.</h1>
-  <p class="intro">$edition_intro</p>
-  <img class="hero" src="$cover_photo" alt="$cover_alt">
-  <p class="caption">$cover_caption</p>
-  <div class="cover-bottom">
-    <svg class="motif" viewBox="0 0 160 90" aria-hidden="true"><circle cx="35" cy="45" r="10" fill="#1B1A19"/><circle cx="125" cy="45" r="10" fill="#F0A35E"/><circle cx="125" cy="45" r="28" fill="none" stroke="#CFCECA" stroke-width="2" stroke-dasharray="4 7" stroke-linecap="round"/><path d="M45 45H115" stroke="#F0A35E" stroke-width="3" stroke-linecap="round"/></svg>
-    <p>Could a little context help people feel more connected to your space—and to one another?</p>
-  </div>
-  <footer class="footer"><span>Exploratory proposal · October 2026</span><span>01 / 04</span></footer>
+<section class="page photo-cover" aria-labelledby="photo-cover-h">
+<img class="cover-image" src="$cover_photo" alt="" aria-hidden="true">
+<div class="cover-shade" aria-hidden="true"></div>
+<header class="top"><div class="brand"><img src="$mark" alt="">Presence</div></header>
+<h1 id="photo-cover-h">A reason to<br>say hello.</h1>
+<footer class="footer"><span>An invitation for welcoming spaces</span><span>1 of 5</span></footer>
 </section>
-<section class="page" aria-labelledby="why-heading">
-  <header class="top"><div class="brand"><img src="$mark" alt="">Presence</div><span class="eyebrow">Why Presence?</span></header>
-  <h2 id="why-heading">Being in the same place<br>is a beginning.</h2>
-  <p class="intro">Knowing a little about someone can give you a reason to say hello.</p>
-  <p class="body">Presence is a customisable, shareable personal page. Someone could share a few interests or what they’re working on, then choose how to share their page. Nearby visibility would be a separate, optional choice, off by default.</p>
-  <div class="rows">
-    <div class="row"><span class="number" aria-hidden="true">01</span><div><h3>For the people who visit</h3><p>A small starting point for a real conversation, with no pressure to join in. Sharing a page would not automatically make someone discoverable nearby.</p></div></div>
-    <div class="row"><span class="number" aria-hidden="true">02</span><div><h3>For your space</h3><p>We hope it could help newcomers feel welcome and regulars find common ground. A shareable space page could also introduce your place and what people might connect over there.</p></div></div>
-    <div class="row"><span class="number" aria-hidden="true">03</span><div><h3>For an early trial</h3><p>Learn whether that context is useful in everyday visits—and whether the experience feels comfortable. Benefits to community, repeat visits or revenue are not established.</p></div></div>
-  </div>
-  <img class="photo-strip" src="$context_photo" alt="$context_alt">
-  <p class="caption">$context_caption</p>
-  <footer class="footer"><span>Personal pages first · local discovery is optional</span><span>02 / 04</span></footer>
+
+<section class="page" aria-labelledby="cover-h">
+<header class="top">
+<div class="brand">
+<img src="$mark" alt="">Presence</div>
+<p>For welcoming spaces</p>
+</header>
+<p class="label">$audience</p>
+<h2 id="cover-h" style="margin-top:5mm">An interest<br>in common</h2>
+<p class="intro">$edition_intro</p>
+<figure class="moment">
+<figcaption>An imagined moment at a café. These introductions are fictional.</figcaption>
+<div class="introductions">
+<div class="introduction">
+<p>You’re interested in</p>
+<p class="interest">Local walks</p>
+<p style="margin-top:3mm">You choose to share it on your introduction.</p>
+</div>
+<svg class="linking" viewBox="0 0 80 80" aria-hidden="true">
+<circle cx="12" cy="40" r="7" fill="#1B1A19"/>
+<path d="M19 40H61" stroke="#F0A35E" stroke-width="3"/>
+<circle cx="68" cy="40" r="7" fill="#F0A35E"/>
+</svg>
+<div class="introduction">
+<p>Someone else is too</p>
+<p class="interest">Local walks</p>
+<p style="margin-top:3mm">They choose to share it on theirs.</p>
+</div>
+</div>
+<p class="explain">“Local walks” is the interest you have in common. It gives you something simple to ask about. Whether you say hello is up to you.</p>
+</figure>
+<p class="body">Presence would give people a shareable introduction to themselves: interests, projects and whatever they want others to know. They would choose separately whether to be discoverable nearby.</p>
+<p class="truth">We’re still working out how people could find these introductions nearby. This example shows the idea, not a live feature.</p>
+<p class="closing-line">We’re looking for places that would help us find out whether this is useful.</p>
+<footer class="footer">
+<span>Host invitation · October 2026</span>
+<span>2 of 5</span>
+</footer>
 </section>
-<section class="page trial-page" aria-labelledby="trial-heading">
-  <header class="top"><div class="brand"><img src="$mark" alt="">Presence</div><span class="eyebrow">What could a trial involve?</span></header>
-  <h2 id="trial-heading">Start small.<br>Shape it together.</h2>
-  <p class="intro">An initial conversation, then a small trial only if we agree it makes sense for your space.</p>
-  <div class="columns">
-    <div><p class="phone-label">Fictional space-page example</p><div class="phone"><div class="screen"><img src="$example_art" alt="Illustration of a café window, table and plant"><div class="profile"><p class="muted" style="margin-top:0">Café · Example town, UK</p><h3 style="margin-top:3mm">Common Ground</h3><p>Good coffee. A little common ground.</p><p>A neighbourhood café for reading, small projects and unhurried conversations.</p><p><strong>Say hello about</strong></p><div class="tags"><span class="tag">What you’re reading</span><span class="tag">Side projects</span><span class="tag">Local walks</span></div><p class="muted">Nearby discovery is not active in this example.</p></div></div></div></div>
-    <div class="side-copy"><h3>Agree the fit</h3><p>Discuss your visitors, what feels appropriate, how to introduce the idea and how a trial could fit into daily routines. Timing and support would be agreed before a trial.</p><h3>Give people a choice</h3><p>A link or QR code could introduce Presence. Visitors would decide whether to share a page and, separately, whether to be visible nearby. Conversation stays optional.</p><h3>Share what you notice</h3><p>Introduce the idea and give trial feedback. You would not need to organise events or offer discounts. We’d explore whether it adds value without adding friction.</p></div>
-  </div>
-  <div class="equipment"><h3>Small, discreet equipment—if needed</h3><p>Small Bluetooth beacons are one approach being investigated. Any trial equipment would be intended to fit quietly into your space. Our proposed approach is for Presence to supply it for early trials rather than ask hosts to buy a beacon; supply arrangements are not yet agreed.</p></div>
-  <div class="note">Automatic discovery without repeated venue check-ins is the ambition. Detection technology, hardware requirements, costs and accuracy are not confirmed. A shareable space page is also a proposed feature; this example does not create a live venue page.</div>
-  <footer class="footer"><span>A conversation is not a commitment to participate</span><span>03 / 04</span></footer>
+<section class="page" aria-labelledby="host-h">
+<header class="top">
+<div class="brand">
+<img src="$mark" alt="">Presence</div>
+<p>The host’s part</p>
+</header>
+<h2 id="host-h">What we’d ask<br>of your space</h2>
+<p class="intro">Introduce the idea to visitors. Tell us what feels useful, awkward or easy to ignore.</p>
+<div class="roles">
+<section>
+<h3>Your part</h3>
+<ul>
+<li>Choose a natural place to introduce Presence—a website link, a QR code or a short mention.</li>
+<li>Let visitors decide whether to take part. Quiet visits should stay comfortable too.</li>
+<li>Share what you notice and what your visitors tell you.</li>
+</ul>
 </section>
-<section class="page" aria-labelledby="next-heading">
-  <header class="top"><div class="brand"><img src="$mark" alt="">Presence</div><span class="eyebrow">A useful first conversation</span></header>
-  <h2 id="next-heading">What would make this<br>useful for your space?</h2>
-  <p class="intro">We’d rather begin by listening than ask you to commit to an unfinished idea.</p>
-  <ul class="questions"><li>When do visitors seem open to conversation—and when do they prefer their own space?</li><li>What already helps newcomers feel welcome?</li><li>Where could a simple introduction to Presence fit naturally?</li><li>What would you need to know about visitor privacy, support and equipment?</li><li>What would make a small trial worthwhile for you?</li></ul>
-  <div class="note"><strong>Before anything goes live</strong><p style="margin-top:2mm">We need an approved privacy configuration and clear arrangements for support, equipment, trial scope and how to stop. Local discovery needs technical validation. Interest would not be a commitment or a public venue listing.</p></div>
-  <div class="closing"><h3>Let’s explore whether there’s a fit.</h3><p>If someone has shared this pack with you, continue the conversation with them. There is no signup or data collection in this document.</p><a class="link" href="https://presence-candid.vercel.app/spaces">Explore the spaces preview ↗</a><p class="tiny muted">The website’s interest forms are non-collecting design previews. Registration is not open yet.</p></div>
-  <div class="credits"><p><strong>About this pack</strong> · A starter edition for welcoming spaces. Photographs illustrate settings, not participating venues or endorsements. The Common Ground page is fictional. Presence’s mark and wording remain provisional.</p><p style="margin-top:3mm">$photo_credit · <a href="https://unsplash.com/license">Unsplash licence</a>. Outfit font: SIL Open Font License. Version 1 · October 2026.</p></div>
-  <footer class="footer"><span>Presence · A reason to say hello.</span><span>04 / 04</span></footer>
+<section>
+<h3>What we would agree with you</h3>
+<ul>
+<li>How to introduce Presence and explain the choices clearly.</li>
+<li>Who helps during the trial, what feedback is useful and how to stop.</li>
+<li>Any equipment and setup before you decide to take part.</li>
+</ul>
+</section>
+</div>
+<p class="body">You wouldn’t need to organise events or offer discounts. The aim is to see whether a little context helps newcomers feel welcome and regulars find a reason to talk. That benefit still needs testing.</p>
+
+<footer class="footer">
+<span>A first conversation carries no commitment</span>
+<span>3 of 5</span>
+</footer>
+</section>
+<section class="page" aria-labelledby="space-h">
+<header class="top">
+<div class="brand">
+<img src="$mark" alt="">Presence</div>
+<p>Sharing and discovery</p>
+</header>
+<h2 id="space-h">A space page<br>you could share</h2>
+<p class="intro">An introduction to the place, and to what people might have in common there.</p>
+<div class="example-layout">
+<figure>
+<figcaption class="label" style="margin-bottom:3mm">Fictional space-page example</figcaption>
+<div class="example">
+<img src="$example_art" alt="Illustration of a café window and table">
+<div class="example-content">
+<p class="label" style="margin-top:0">Café · Example town</p>
+<h3 style="margin-top:3mm">Common Ground</h3>
+<p>A neighbourhood café for reading, small projects and unhurried conversations.</p>
+<p class="topics">Say hello about</p>
+<p>What you’re reading<br>Side projects<br>Local walks</p>
+</div>
+</div>
+</figure>
+<div class="annotations">
+<h3>An introduction to your place</h3>
+<p>A proposed page for your website, socials or a QR code in the space.</p>
+<h3>A few starting points</h3>
+<p>Topics give visitors something concrete to notice and ask about.</p>
+<h3>A separate choice</h3>
+<p>Sharing this page would not switch on anyone’s nearby visibility. Local discovery would be optional and off by default.</p>
+</div>
+</div>
+<div class="questions">
+<h3>Before a trial</h3>
+<p>We still need to test how nearby discovery would work in a real space, and whether visitors find it useful and comfortable.</p>
+<p>If a trial needs equipment, we want it to be small and discreet. We propose supplying it for early trials. We would agree what is needed, any costs and who helps before you decide to take part.</p>
+<p>The example above does not create a live venue page. Interest would not create a public listing.</p>
+</div>
+<footer class="footer">
+<span>Visitors control what they share</span>
+<span>4 of 5</span>
+</footer>
+</section>
+<section class="page" aria-labelledby="invite-h">
+<header class="top">
+<div class="brand">
+<img src="$mark" alt="">Presence</div>
+<p>A first conversation</p>
+</header>
+<h2 id="invite-h">Would this be<br>useful here?</h2>
+<p class="intro">We’d like to hear about your place before proposing a trial.</p>
+<div class="prompts">
+<div class="prompt">
+<svg viewBox="0 0 36 36" aria-hidden="true">
+<circle cx="18" cy="18" r="5" fill="#1B1A19"/>
+</svg>
+<p>What already helps people feel welcome?</p>
+</div>
+<div class="prompt">
+<svg viewBox="0 0 36 36" aria-hidden="true">
+<circle cx="18" cy="18" r="5" fill="#1B1A19"/>
+<path d="M23 18H31" stroke="#F0A35E" stroke-width="2"/>
+</svg>
+<p>Where might an introduction fit naturally into a visit?</p>
+</div>
+<div class="prompt">
+<svg viewBox="0 0 36 36" aria-hidden="true">
+<circle cx="18" cy="18" r="5" fill="#1B1A19"/>
+<circle cx="18" cy="18" r="14" fill="none" stroke="#8A8780" stroke-width="1.5" stroke-dasharray="3 5"/>
+</svg>
+<p>What would make you say no?</p>
+</div>
+</div>
+<div class="invite">
+<h3>Tell us a little about your space.</h3>
+<p class="body">Email us to start a conversation. Asking a question does not commit you to a trial or create a venue listing.</p>
+<a class="contact" href="mailto:hello@meetpresence.com">hello@meetpresence.com</a>
+<p class="signature">$sender_name</p>
+<a class="site-link" href="https://meetpresence.com/spaces">meetpresence.com/spaces</a>
+</div>
+<p class="body">Before a trial, we would agree how visitors’ information is used, who handles questions, how long details are kept and how to stop. The website’s signup forms are still non-collecting previews.</p>
+<div class="credits">
+<p>Starter edition · the scenario and Common Ground are fictional. The cover photograph is illustrative and does not show a participating venue.</p>
+<p style="margin-top:3mm">$photo_credit · <a href="https://unsplash.com/license">Unsplash licence</a>. Outfit: SIL Open Font License. Version 2 · October 2026.</p>
+</div>
+<footer class="footer">
+<span>Presence · A reason to say hello.</span>
+<span>5 of 5</span>
+</footer>
 </section>
 </main>
 </body>
