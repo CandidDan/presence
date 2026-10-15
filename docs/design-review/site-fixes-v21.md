@@ -15,7 +15,7 @@
 
 # Presence website: v2.1 audit recommendations applied
 
-Scope: Mi refinement of existing web pages, based on main `4a5e56c507cff61eb4e308cd690d379febdca27c`. Standards: [core v2.1](https://github.com/CandidDan/mods/blob/aaf177483c33ae4158d4ecb43d710e7e277ef628/design-standards/skills/design-standards/SKILL.md) and [audit](https://github.com/CandidDan/mods/blob/aaf177483c33ae4158d4ecb43d710e7e277ef628/design-standards/skills/design-standards-audit/SKILL.md). The original findings are in the separate PDF/audit PR #16; this change does not include that PDF redesign.
+Scope: Mi refinement of existing web pages, based on main `4a5e56c507cff61eb4e308cd690d379febdca27c`. Standards: [core v2.1](https://github.com/CandidDan/mods/blob/aaf177483c33ae4158d4ecb43d710e7e277ef628/design-standards/skills/design-standards/SKILL.md) and [audit](https://github.com/CandidDan/mods/blob/aaf177483c33ae4158d4ecb43d710e7e277ef628/design-standards/skills/design-standards-audit/SKILL.md). The original findings and PDF redesign are in PR #16. Its reviewed five-page pack and editable source are now included here so the updated website downloads the same PDF.
 
 ## Intent inherited from the canonical brief
 
@@ -77,4 +77,4 @@ All development and browser checks used temporary cloud static servers; no produ
 
 Leah's visual/copy sign-off and an independent two-second purpose test remain outstanding. Test screen-reader use, forced colours, actual phones and reading with the connector at different scroll positions. The decision to shorten/remove a profile example should follow reader feedback, not an untested assumption.
 
-Real signup still requires approved responsible-operator/contact/retention details, approved privacy/hostname configuration and an authorised real-provider delivery test. Local discovery still needs technical and trial validation. No service, collection, campaign, public venue listing or production deployment is enabled by this PR.
+Real signup still requires approved responsible-operator/contact/retention details, approved privacy/hostname configuration and an authorised real-provider delivery test. Local discovery still needs technical and trial validation. The `/spaces` host-pack link now downloads the five-page edition with its full-bleed “A reason to say hello” cover. No service, collection, campaign, public venue listing or production deployment is enabled by this PR.
