@@ -1,0 +1,342 @@
+{
+  "reflow": [
+    {
+      "route": "/",
+      "width": 1440,
+      "mode": "normal",
+      "reflow": "pass"
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "mode": "text-spacing",
+      "reflow": "pass"
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "mode": "text200",
+      "reflow": "pass"
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "mode": "normal",
+      "reflow": "pass"
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "mode": "text-spacing",
+      "reflow": "pass"
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "mode": "text200",
+      "reflow": "pass"
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "mode": "normal",
+      "reflow": "pass"
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "mode": "text-spacing",
+      "reflow": "pass"
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "mode": "text200",
+      "reflow": "pass"
+    },
+    {
+      "route": "/spaces",
+      "width": 1440,
+      "mode": "normal",
+      "reflow": "pass"
+    },
+    {
+      "route": "/spaces",
+      "width": 1440,
+      "mode": "text-spacing",
+      "reflow": "pass"
+    },
+    {
+      "route": "/spaces",
+      "width": 1440,
+      "mode": "text200",
+      "reflow": "pass"
+    },
+    {
+      "route": "/spaces",
+      "width": 390,
+      "mode": "normal",
+      "reflow": "pass"
+    },
+    {
+      "route": "/spaces",
+      "width": 390,
+      "mode": "text-spacing",
+      "reflow": "pass"
+    },
+    {
+      "route": "/spaces",
+      "width": 390,
+      "mode": "text200",
+      "reflow": "pass"
+    },
+    {
+      "route": "/spaces",
+      "width": 320,
+      "mode": "normal",
+      "reflow": "pass"
+    },
+    {
+      "route": "/spaces",
+      "width": 320,
+      "mode": "text-spacing",
+      "reflow": "pass"
+    },
+    {
+      "route": "/spaces",
+      "width": 320,
+      "mode": "text200",
+      "reflow": "pass"
+    },
+    {
+      "route": "/spaces/example",
+      "width": 1440,
+      "mode": "normal",
+      "reflow": "pass"
+    },
+    {
+      "route": "/spaces/example",
+      "width": 1440,
+      "mode": "text-spacing",
+      "reflow": "pass"
+    },
+    {
+      "route": "/spaces/example",
+      "width": 1440,
+      "mode": "text200",
+      "reflow": "pass"
+    },
+    {
+      "route": "/spaces/example",
+      "width": 390,
+      "mode": "normal",
+      "reflow": "pass"
+    },
+    {
+      "route": "/spaces/example",
+      "width": 390,
+      "mode": "text-spacing",
+      "reflow": "pass"
+    },
+    {
+      "route": "/spaces/example",
+      "width": 390,
+      "mode": "text200",
+      "reflow": "pass"
+    },
+    {
+      "route": "/spaces/example",
+      "width": 320,
+      "mode": "normal",
+      "reflow": "pass"
+    },
+    {
+      "route": "/spaces/example",
+      "width": 320,
+      "mode": "text-spacing",
+      "reflow": "pass"
+    },
+    {
+      "route": "/spaces/example",
+      "width": 320,
+      "mode": "text200",
+      "reflow": "pass"
+    },
+    {
+      "route": "/privacy",
+      "width": 1440,
+      "mode": "normal",
+      "reflow": "pass"
+    },
+    {
+      "route": "/privacy",
+      "width": 1440,
+      "mode": "text-spacing",
+      "reflow": "pass"
+    },
+    {
+      "route": "/privacy",
+      "width": 1440,
+      "mode": "text200",
+      "reflow": "pass"
+    },
+    {
+      "route": "/privacy",
+      "width": 390,
+      "mode": "normal",
+      "reflow": "pass"
+    },
+    {
+      "route": "/privacy",
+      "width": 390,
+      "mode": "text-spacing",
+      "reflow": "pass"
+    },
+    {
+      "route": "/privacy",
+      "width": 390,
+      "mode": "text200",
+      "reflow": "pass"
+    },
+    {
+      "route": "/privacy",
+      "width": 320,
+      "mode": "normal",
+      "reflow": "pass"
+    },
+    {
+      "route": "/privacy",
+      "width": 320,
+      "mode": "text-spacing",
+      "reflow": "pass"
+    },
+    {
+      "route": "/privacy",
+      "width": 320,
+      "mode": "text200",
+      "reflow": "pass"
+    },
+    {
+      "route": "/cookies",
+      "width": 1440,
+      "mode": "normal",
+      "reflow": "pass"
+    },
+    {
+      "route": "/cookies",
+      "width": 1440,
+      "mode": "text-spacing",
+      "reflow": "pass"
+    },
+    {
+      "route": "/cookies",
+      "width": 1440,
+      "mode": "text200",
+      "reflow": "pass"
+    },
+    {
+      "route": "/cookies",
+      "width": 390,
+      "mode": "normal",
+      "reflow": "pass"
+    },
+    {
+      "route": "/cookies",
+      "width": 390,
+      "mode": "text-spacing",
+      "reflow": "pass"
+    },
+    {
+      "route": "/cookies",
+      "width": 390,
+      "mode": "text200",
+      "reflow": "pass"
+    },
+    {
+      "route": "/cookies",
+      "width": 320,
+      "mode": "normal",
+      "reflow": "pass"
+    },
+    {
+      "route": "/cookies",
+      "width": 320,
+      "mode": "text-spacing",
+      "reflow": "pass"
+    },
+    {
+      "route": "/cookies",
+      "width": 320,
+      "mode": "text200",
+      "reflow": "pass"
+    },
+    {
+      "route": "/terms",
+      "width": 1440,
+      "mode": "normal",
+      "reflow": "pass"
+    },
+    {
+      "route": "/terms",
+      "width": 1440,
+      "mode": "text-spacing",
+      "reflow": "pass"
+    },
+    {
+      "route": "/terms",
+      "width": 1440,
+      "mode": "text200",
+      "reflow": "pass"
+    },
+    {
+      "route": "/terms",
+      "width": 390,
+      "mode": "normal",
+      "reflow": "pass"
+    },
+    {
+      "route": "/terms",
+      "width": 390,
+      "mode": "text-spacing",
+      "reflow": "pass"
+    },
+    {
+      "route": "/terms",
+      "width": 390,
+      "mode": "text200",
+      "reflow": "pass"
+    },
+    {
+      "route": "/terms",
+      "width": 320,
+      "mode": "normal",
+      "reflow": "pass"
+    },
+    {
+      "route": "/terms",
+      "width": 320,
+      "mode": "text-spacing",
+      "reflow": "pass"
+    },
+    {
+      "route": "/terms",
+      "width": 320,
+      "mode": "text200",
+      "reflow": "pass"
+    }
+  ],
+  "contrast": [
+    {
+      "route": "/",
+      "focus": 6.208285247921897,
+      "edge": 4.663174982805769,
+      "status": 16.060280594632246
+    },
+    {
+      "route": "/spaces",
+      "focus": 6.208285247921897,
+      "edge": 4.663174982805769,
+      "status": 16.060280594632246
+    }
+  ]
+}

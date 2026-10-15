@@ -29,6 +29,7 @@
       return field ? field.value.trim() : '';
     }
     if (ready) {
+      button.textContent = kind === 'people' ? 'Request early-access updates' : 'Request space-trial updates';
       notice.textContent = 'Email updates are handled by Klaviyo. We use double opt-in; check your inbox if a confirmation is needed. You can unsubscribe at any time. Read the privacy notice below.';
       form.querySelectorAll('[data-live-required]').forEach(function (field) { field.required = true; });
       if (consent) consent.required = true;

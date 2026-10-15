@@ -1,0 +1,191 @@
+[
+  {
+    "tag": "A",
+    "id": "",
+    "text": "Skip to content",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 12,
+    "bottom": 48
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "Presence",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 31,
+    "bottom": 59
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "For people",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 24,
+    "bottom": 66
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "Explore a trial",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 638.484375,
+    "bottom": 690.484375
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "View the full example \u2197",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 478.15625,
+    "bottom": 522.15625
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "Read the host pack (PDF, 4 pages)",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 476.390625,
+    "bottom": 524.578125
+  },
+  {
+    "tag": "INPUT",
+    "id": "contact-name",
+    "text": "",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 473.015625,
+    "bottom": 527.015625
+  },
+  {
+    "tag": "INPUT",
+    "id": "space-email",
+    "text": "",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 580.015625,
+    "bottom": 634.015625
+  },
+  {
+    "tag": "INPUT",
+    "id": "space-name",
+    "text": "",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 687.015625,
+    "bottom": 741.015625
+  },
+  {
+    "tag": "INPUT",
+    "id": "space-town",
+    "text": "",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 794.015625,
+    "bottom": 848.015625
+  },
+  {
+    "tag": "INPUT",
+    "id": "space-country",
+    "text": "",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 901.015625,
+    "bottom": 955.015625
+  },
+  {
+    "tag": "INPUT",
+    "id": "space-type",
+    "text": "",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 473.015625,
+    "bottom": 527.015625
+  },
+  {
+    "tag": "INPUT",
+    "id": "space-link",
+    "text": "",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 580.015625,
+    "bottom": 634.015625
+  },
+  {
+    "tag": "INPUT",
+    "id": "space-consent",
+    "text": "",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 662.015625,
+    "bottom": 686.015625
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "text": "Try the form preview",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 729.609375,
+    "bottom": 781.609375
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "privacy notice",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 806.609375,
+    "bottom": 824.609375
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "cookie information",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 806.609375,
+    "bottom": 824.609375
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "Privacy",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 917.609375,
+    "bottom": 951.609375
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "Cookies",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 917.609375,
+    "bottom": 951.609375
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "text": "About this preview",
+    "outline": "rgb(138, 76, 22) solid 3px",
+    "color": "rgb(138, 76, 22)",
+    "top": 917.609375,
+    "bottom": 951.609375
+  },
+  {
+    "tag": "BODY",
+    "id": "",
+    "text": "Skip to content\nIn development\nPresence\nFor people\nA place t",
+    "outline": "rgb(27, 26, 25) none 3px",
+    "color": "rgb(27, 26, 25)",
+    "top": -3952,
+    "bottom": 999.609375
+  }
+]
