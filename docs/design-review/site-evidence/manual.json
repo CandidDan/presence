@@ -1,0 +1,48 @@
+{
+  "controls": [
+    {
+      "route": "/",
+      "focus": {
+        "outline": "rgb(240, 163, 94) solid 3px",
+        "color": "rgb(240, 163, 94)"
+      },
+      "message": {
+        "color": "rgb(185, 115, 31)",
+        "size": "16px"
+      },
+      "border": {
+        "border": "rgb(207, 206, 202)",
+        "background": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "route": "/spaces",
+      "focus": {
+        "outline": "rgb(240, 163, 94) solid 3px",
+        "color": "rgb(240, 163, 94)"
+      },
+      "message": {
+        "color": "rgb(185, 115, 31)",
+        "size": "16px"
+      },
+      "border": {
+        "border": "rgb(207, 206, 202)",
+        "background": "rgb(255, 255, 255)"
+      }
+    }
+  ],
+  "text200_overflow": [
+    {
+      "tag": "NAV",
+      "class": "site-nav",
+      "text": "For spaces",
+      "right": 367.96875
+    },
+    {
+      "tag": "A",
+      "class": "",
+      "text": "For spaces",
+      "right": 367.96875
+    }
+  ]
+}
